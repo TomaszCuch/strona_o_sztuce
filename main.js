@@ -472,41 +472,54 @@ function change_lang() {
   );
 
   const isFile = url.protocol === "file:";
-  const isGithubPages = url.hostname.endsWith(".github.io");
-
   let parts = url.pathname.split("/").filter(Boolean);
 
-  // 🔒 NA GITHUB PAGES: PIERWSZY ELEMENT = REPO
-  let base = [];
-  if (isGithubPages && parts.length > 0) {
-    base.push(parts.shift());
+  // ───────── FILE:// ─────────
+  if (isFile) {
+    const filename = parts.pop() || "index.html";
+    const inEn = parts.at(-1) === "en";
+
+    if (inEn) {
+      parts.pop(); // usuń en
+      parts.push(enToPl[filename] || filename);
+    } else {
+      parts.push("en");
+      parts.push(plToEn[filename] || filename);
+    }
+
+    window.location.href =
+      "file:///" + parts.join("/") + search + hash;
+    return;
   }
 
-  // plik (jeśli brak – index.html)
+  // ───────── HTTP / HTTPS ─────────
+  const isGithubPages = url.hostname.endsWith(".github.io");
+  let base = [];
+
+  if (isGithubPages && parts.length > 0) {
+    base.push(parts.shift()); // repo
+  }
+
   let filename = parts.at(-1)?.includes(".")
     ? parts.pop()
     : "index.html";
 
-  // język = PIERWSZY element PO REPO
   const inEn = parts[0] === "en";
   if (inEn) parts.shift();
 
   if (inEn) {
-    // EN → PL
-    const plFile = enToPl[filename] || filename;
-    if (plFile !== "index.html") parts.push(plFile);
+    const pl = enToPl[filename] || filename;
+    if (pl !== "index.html") parts.push(pl);
   } else {
-    // PL → EN
     parts.unshift("en");
-    const enFile = plToEn[filename] || filename;
-    if (enFile !== "index.html") parts.push(enFile);
+    const en = plToEn[filename] || filename;
+    if (en !== "index.html") parts.push(en);
   }
 
-  const prefix = isFile ? "file:///" : "/";
-  const newPath = prefix + [...base, ...parts].join("/");
-
-  window.location.href = newPath + search + hash;
+  window.location.href =
+    "/" + [...base, ...parts].join("/") + search + hash;
 }
+
 
 
 
