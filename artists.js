@@ -297,34 +297,32 @@ function change_lang() {
   );
 
   const isFile = url.protocol === "file:";
-  const isGithubPages =
-    url.hostname.endsWith("github.io") &&
-    url.pathname.split("/").filter(Boolean).length > 0;
+  const isGithubPages = url.hostname.endsWith(".github.io");
 
   let parts = url.pathname.split("/").filter(Boolean);
 
-  // 🔹 wyodrębniamy BASE PATH (repo lub folder projektu)
+  // 🔒 NA GITHUB PAGES: PIERWSZY ELEMENT = REPO
   let base = [];
-  if (isGithubPages) {
-    base.push(parts.shift()); // nazwa repozytorium
+  if (isGithubPages && parts.length > 0) {
+    base.push(parts.shift());
   }
 
-  // plik
+  // plik (jeśli brak – index.html)
   let filename = parts.at(-1)?.includes(".")
     ? parts.pop()
     : "index.html";
 
-  // język = ostatni folder
-  const inEn = parts.at(-1) === "en";
+  // język = PIERWSZY element PO REPO
+  const inEn = parts[0] === "en";
+  if (inEn) parts.shift();
 
   if (inEn) {
     // EN → PL
-    parts.pop();
     const plFile = enToPl[filename] || filename;
     if (plFile !== "index.html") parts.push(plFile);
   } else {
     // PL → EN
-    parts.push("en");
+    parts.unshift("en");
     const enFile = plToEn[filename] || filename;
     if (enFile !== "index.html") parts.push(enFile);
   }
@@ -334,6 +332,7 @@ function change_lang() {
 
   window.location.href = newPath + search + hash;
 }
+
 
 
 
