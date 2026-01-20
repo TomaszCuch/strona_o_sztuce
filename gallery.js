@@ -284,7 +284,7 @@ document.addEventListener('keydown', (e) => {
 function change_lang() {
   const url = new URL(window.location.href);
   const search = url.search || "";
-  const hash = ""; // ignorujemy hash
+  const hash = "";
 
   const plToEn = {
     "index.html": "index.html",
@@ -297,55 +297,45 @@ function change_lang() {
     Object.entries(plToEn).map(([k, v]) => [v, k])
   );
 
-  const isLocal = url.protocol === "file:";
-  let pathname = url.pathname;
+  const isFile = url.protocol === "file:";
+  const isGithubPages =
+    url.hostname.endsWith("github.io") &&
+    url.pathname.split("/").filter(Boolean).length > 0;
 
-  let elems, filename, inEn, folderPath;
+  let parts = url.pathname.split("/").filter(Boolean);
 
-  if (isLocal) {
-    // lokalnie: rozdzielamy folder od pliku
-    const parts = pathname.replace(/^\/+/,"").split("/"); // usuń początkowy '/'
-    filename = parts.pop() || "index.html"; // ostatni element to plik
-    folderPath = parts.join("/"); // reszta to folder
-    elems = parts; 
-    inEn = elems.includes("en");
-  } else {
-    // na serwerze: rozbijamy ścieżkę i sprawdzamy język
-    elems = pathname.split("/").filter(e => e !== "");
-    if (elems[0] === "en") {
-      inEn = true;
-      filename = elems[1] || "index.html";
-    } else {
-      filename = elems[0] || "index.html";
-    }
+  // 🔹 wyodrębniamy BASE PATH (repo lub folder projektu)
+  let base = [];
+  if (isGithubPages) {
+    base.push(parts.shift()); // nazwa repozytorium
   }
 
-  let newPath;
+  // plik
+  let filename = parts.at(-1)?.includes(".")
+    ? parts.pop()
+    : "index.html";
+
+  // język = ostatni folder
+  const inEn = parts.at(-1) === "en";
 
   if (inEn) {
-    // zmiana z angielskiego na polski
-    if (isLocal) {
-      // folder bez 'en', plik po folderze
-      const newFolder = elems.filter(e => e !== "en");
-      newPath = `file:///${newFolder.length ? newFolder.join("/") + "/" : ""}${enToPl[filename] || filename}`;
-    } else {
-      // serwer
-      const newElems = elems.slice(1); // usuń 'en'
-      newElems[0] = enToPl[filename] || filename;
-      newPath = "/" + newElems.join("/");
-    }
+    // EN → PL
+    parts.pop();
+    const plFile = enToPl[filename] || filename;
+    if (plFile !== "index.html") parts.push(plFile);
   } else {
-    // zmiana z polskiego na angielski
-    if (isLocal) {
-      // dodaj 'en' do folderu przed plikiem
-      newPath = `file:///${folderPath ? folderPath + "/" : ""}en/${plToEn[filename] || filename}`;
-    } else {
-      newPath = "/en/" + (plToEn[filename] || filename);
-    }
+    // PL → EN
+    parts.push("en");
+    const enFile = plToEn[filename] || filename;
+    if (enFile !== "index.html") parts.push(enFile);
   }
+
+  const prefix = isFile ? "file:///" : "/";
+  const newPath = prefix + [...base, ...parts].join("/");
 
   window.location.href = newPath + search + hash;
 }
+
 
 lang_change.addEventListener("click", change_lang);
 
