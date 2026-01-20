@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="alternate" href="/artysci.html" hreflang="pl">
+    <link rel="alternate" href="/en/artists.html" hreflang="en">
+</head>
+
+<body>
+    <header id="header">
+
+        <div id="search_div_head">
+            <button id="search_head-btn" title="Search" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_head" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+            </button>
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" title="Homepage">
+              <img src="../img/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1 class="title"><a href="index.html" title="Homepage">Art in Focus</a></h1>
+            
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="index.html" title="Homepage">Homepage</a></li>
+                    <li><a href="artists.html" title="Artists" class="active">Artists</a></li>
+                    <li><a href="gallery.html" title="Gallery">Gallery</a></li>
+                    <li><a href="events.html" title="Events">Events</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="container">
+
+          <div id="search_div_lang">
+            <button id="search_lang-btn" title="Search" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_lang" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg> 
+            </button>
+          </div>
+
+          <div id="lang-container">
+
+            <img src="../img/lang.png" alt="lang" id="lang">
+            <div id="lang-text">EN</div>
+                <button id="lang-select-btn" title="Change language" aria-label="Change Language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.000000 172.000000"
+                    preserveAspectRatio="xMidYMid meet" id="lang-select" aria-hidden="true">
+                    <g transform="translate(0.000000,172.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                    <path d="M125 1694 c-74 -38 -124 -115 -125 -190 0 -88 12 -101 712 -800 420 -418 676 -667 700 -677 46 -22 130 -22 176 0 24 10 280 259 700 677 700 699 712 712 712 800 -1 77 -65 169 -137 197 -38 14 -121 11 -161 -8 -24 -10 -252 -230 -619 -597 l-583 -581 -582 581 c-368 367 -596 587 -620 597 -45 21 -134 22 -173 1z"/></g></svg> 
+                </button>
+                
+            <div id="lang-menu">
+                <p id="menu-title">Language</p>
+                <div id="menu-text" title="Polski">
+                    <img src="../img/pl.png" alt="" aria-hidden="true" id="flag">
+                    <span id="lang-shortcut">PL</span>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <form id="search_text" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+          preserveAspectRatio="xMidYMid meet" id="search_icon" aria-hidden="true">
+          <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+          <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+          
+          <input type="text" id="search" aria-label="Search" placeholder="Search" maxlength="60" tabindex="0">
+
+          <button id="search_close_btn" type="button" title="Close" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+              preserveAspectRatio="xMidYMid meet" id="search_close" aria-hidden="true">
+              <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+              <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+          
+          <div id="tr"></div>
+        </form>
+
+        <div id="search_results">
+            
+            <div id="results"></div>
+            
+            <button id="inner_search_close_btn" title="Close" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+                preserveAspectRatio="xMidYMid meet" id="inner_search_close" aria-hidden="true">
+                <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="artysci-container">
+        <div class="intro-text">
+            <h2>Our Artists</h2>
+            <p>Meet the outstanding creators whose works we present in our gallery.</p>
+        </div>
+
+        <section class="artists-list">
+            <h3 class="lt">List of artists related to art</h3>
+        
+            <article class="artist-row m search-item" id="Leonardo_da_Vinci" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ldv.png" alt="Leonardo da Vinci" class="artist_img" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Leonardo da Vinci</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>Italian Renaissance genius. Author of the most famous painting in the world – "Mona Lisa",
+                    as well as "The Last Supper" and "Lady with an Ermine".</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Edvard_Munch" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/em.jpg" alt="Edvard Munch" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Edvard Munch</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>Norwegian painter and printmaker, considered a pioneer of Expressionism. His most famous work,
+                        "The Scream", became an icon of modern anxiety.</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Vincent_van_Gogh" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/vvg.jpg" alt="Vincent van Gogh" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Vincent van Gogh</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>Dutch Post-Impressionist painter whose work with vivid colors
+                        (e.g., "The Starry Night") gained fame after his death.</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Paul_Cézanne" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/pc.jpg" alt="Paul Cézanne" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Paul Cézanne</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>French Post-Impressionist painter. His innovative approach to perspective
+                    and form (e.g., in "The Card Players") paved the way for Cubism.</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Johannes_Vermeer" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/jv.jpg" alt="Johannes Vermeer" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Johannes Vermeer</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>Master of Dutch genre painting. Known for extraordinary use of light
+                    in intimate interior scenes, e.g., "Girl with a Pearl Earring".</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Caspar_David_Friedrich" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/cdf.jpg" alt="Caspar David Friedrich" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Caspar David Friedrich</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>German Romantic landscape painter. His landscapes, such as "Wanderer above the Sea of Fog",
+                    depict the power of nature and the smallness of man within it.</p>
+                </div>
+            </article>
+
+            <article class="artist-row m search-item" id="Albrecht_Dürer" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ad.jpg" alt="Albrecht Dürer" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Albrecht Dürer</h3>
+                    <span class="artist-category malarstwo">Painting</span>
+                    <p>German Renaissance painter and printmaker. Known for extremely precise engravings
+                    and woodcuts, as well as nature studies like "Young Hare".</p>
+                </div>
+            </article>
+
+            <article class="artist-row m_r search-item" id="Michelangelo" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ma.jpg" alt="Michelangelo" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Michelangelo</h3>
+                    <span class="artist-category m_r">Painting / Sculpture</span>
+                    <p>Italian Renaissance genius—sculptor, painter, architect, and poet. Creator of monumental
+                        works: sculptures "David" and "Pieta" and Sistine Chapel frescoes.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Thutmose" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/un.svg" alt="Thutmose" class="artist_img">
+                </div>
+                <div class="artist-info">
+                    <h3>Thutmose</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Court sculptor of Pharaoh Akhenaten, author of the polychrome bust of Queen Nefertiti,
+                        which was found in his workshop in Amarna.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Pythokritos" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/un.svg" alt="Pythokritos" class="artist_img">
+                </div>
+                <div class="artist-info">
+                    <h3>Pythokritos</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Greek sculptor from Rhodes, presumed creator of "Winged Victory of Samothrace" – a dynamic
+                    statue of the goddess of victory that adorns the Louvre.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Ludwika_Nitschowa" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ln.jpg" alt="Ludwika Nitschowa" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Ludwika Nitschowa</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Ludwika Nitschowa was a 20th-century sculptor, known as the author of the Stefan Starzyński Monument
+                        in Warsaw, combining realism with a patriotic message.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Apollonios_of_Athens" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/un.svg" alt="Apollonios of Athens" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Apollonios of Athens</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Apollonios of Athens was a Greek sculptor of the Hellenistic period, known as the author of
+                        the sculpture "Boxer at Rest", distinguished by its realism.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Jean-Baptiste_Carpeaux" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/jbc.jpg" alt="Jean-Baptiste Carpeaux" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Jean-Baptiste Carpeaux</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Jean-Baptiste Carpeaux was a 19th-century French sculptor, known for expressive realism
+                        and the sculpture "Ugolino and His Sons".</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Frédéric-Auguste_Bartholdi" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/fab.jpg" alt="Frédéric-Auguste Bartholdi" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Frédéric-Auguste Bartholdi</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Frédéric-Auguste Bartholdi was a 19th-century French sculptor, creator of the Statue of Liberty
+                        in New York, known for monumental and symbolic works.</p>
+                </div>
+            </article>
+
+            <article class="artist-row r search-item" id="Antonio_Canova" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ac.jpg" alt="Antonio Canova" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Antonio Canova</h3>
+                    <span class="artist-category rzezba">Sculpture</span>
+                    <p>Antonio Canova was a 19th-century Italian sculptor, known for the sculpture "Psyche and Cupid",
+                        combining anatomical perfection with poetic expression.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Mathew_B._Brady" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/mbb.jpg" alt="Mathew B. Brady" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Mathew B. Brady</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Mathew B. Brady was a 19th-century American photographer, a pioneer of portraits showing
+                        the authority of inventors and historical figures.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Edward_S._Curtis" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/esc.jpg" alt="Edward S. Curtis" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Edward S. Curtis</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Edward S. Curtis was an American photographer and ethnographer,
+                        known for "The North American Indian," documenting Native American culture.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Felice_Beato" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/fb.jpg" alt="Felice Beato" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Felice Beato</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Felice Beato was a 19th-century Italian-British photographer, a pioneer of war
+                        and travel photography, known for photos of Japanese samurai and landscapes.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Jacob_Riis" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/jr.jpg" alt="Jacob Riis" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Jacob Riis</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Jacob Riis was a 19th-century Danish-American photographer and journalist, known
+                        for documenting the lives of New York's poorest residents.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Lewis_Hine" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/lh.jpg" alt="Lewis Hine" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Lewis Hine</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Lewis Hine was an early 20th-century American photographer, known for documenting
+                        child labor and supporting reforms against it.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Adolphe_Braun" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ab.jpg" alt="Adolphe Braun" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Adolphe Braun</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Adolphe Braun was a 19th-century French photographer, known for artistic
+                        still lifes and studio work, combining precision and aesthetics.</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Carleton_Watkins" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/cw.jpg" alt="Carleton Watkins" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Carleton Watkins</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Carleton Watkins was a 19th-century American photographer, known for documenting landscapes
+                        of the western USA, including "Bridal Veil Falls".</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Eugène_Atget" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/ea.jpg" alt="Eugène Atget" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Eugène Atget</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Eugène Atget was a French photographer of the late 19th and early 20th centuries, known
+                        for documenting old Paris, including "The Ragpicker".</p>
+                </div>
+            </article>
+
+            <article class="artist-row f search-item" id="Francis_Frith" tabindex="0">
+                <div class="artist-img-container">
+                    <img src="../img/fr.jpg" alt="Francis Frith" class="artist_img"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGR5PSIuMzVlbSIgZm9udC1zaXplPSIxMDAiIGZpbGw9IiM1NTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCI+PzwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="artist-info">
+                    <h3>Francis Frith</h3>
+                    <span class="artist-category fotografia">Photography</span>
+                    <p>Francis Frith was a 19th-century British travel photographer, known for documenting
+                        exotic places and ancient architecture, including "Luxor".</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <button id="up" style="display: none;">
+        <img src="../img/up.png" alt="" title="Back to top" aria-label="Back to top">
+    </button>
+
+    <footer>
+        <p>2025 © Tomasz Cuch, Aleksander Bzowski, Szymon Fidzina | All rights reserved</p>
+    </footer>
+
+    <script src="../artists.js"></script>
+
+</body>
+</html>

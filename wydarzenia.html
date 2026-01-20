@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wydarzenia</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+
+    <link rel="alternate" href="/wydarzenia.html" hreflang="pl">
+    <link rel="alternate" href="/en/events.html" hreflang="en">
+</head>
+
+<body>
+    <header id="header">
+        <div id="search_div_head">
+            <button id="search_head-btn" title="Szukaj" aria-label="Szukaj">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000" preserveAspectRatio="xMidYMid meet" id="search_head" aria-hidden="true"><g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+            </button>
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" title="Strona główna">
+              <img src="img/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1 class="title"><a href="index.html" title="Strona główna">Sztuka w Obiektywie</a></h1>
+            
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="index.html" title="Strona główna">Strona główna</a></li>
+                    <li><a href="artysci.html" title="Artyści">Artyści</a></li>
+                    <li><a href="galeria.html" title="Galeria">Galeria</a></li>
+                    <li><a href="wydarzenia.html" title="Wydarzenia" class="active">Wydarzenia</a></li>
+                    <li><a href="kontakt.html" title="Kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="container">
+          <div id="search_div_lang">
+            <button id="search_lang-btn" title="Szukaj" aria-label="Szukaj">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000" preserveAspectRatio="xMidYMid meet" id="search_lang" aria-hidden="true"><g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg> 
+            </button>
+          </div>
+
+            <div id="lang-container">
+                <img src="img/lang.png" alt="lang" id="lang">
+                <div id="lang-text">PL</div>
+                    <button id="lang-select-btn" title="Zmień język" aria-label="Zmień język">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.000000 172.000000" preserveAspectRatio="xMidYMid meet" id="lang-select" aria-hidden="true"><g transform="translate(0.000000,172.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M125 1694 c-74 -38 -124 -115 -125 -190 0 -88 12 -101 712 -800 420 -418 676 -667 700 -677 46 -22 130 -22 176 0 24 10 280 259 700 677 700 699 712 712 712 800 -1 77 -65 169 -137 197 -38 14 -121 11 -161 -8 -24 -10 -252 -230 -619 -597 l-583 -581 -582 581 c-368 367 -596 587 -620 597 -45 21 -134 22 -173 1z"/></g></svg> 
+                    </button>
+                <div id="lang-menu">
+                    <p id="menu-title">Język</p>
+                    <div id="menu-text" title="English">
+                        <img src="img/en.png" alt="" aria-hidden="true" id="flag">
+                        <span id="lang-shortcut">EN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="search_text" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000" preserveAspectRatio="xMidYMid meet" id="search_icon" aria-hidden="true"><g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+          <input type="text" id="search" aria-label="Szukaj" placeholder="Szukaj" maxlength="60" tabindex="0">
+          <button id="search_close_btn" type="button" title="Zamknij" aria-label="Zamknij">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000" preserveAspectRatio="xMidYMid meet" id="search_close" aria-hidden="true"><g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+          <div id="tr"></div>
+        </form>
+
+        <div id="search_results">
+            
+            <div id="results"></div>
+          
+            <button id="inner_search_close_btn" title="Zamknij" aria-label="Zamknij">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+                preserveAspectRatio="xMidYMid meet" id="inner_search_close" aria-hidden="true">
+                <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+        </div>
+
+    </header>
+
+    <main class="wydarzenia">
+        <h2>Wydarzenia</h2>
+        <p>Poznaj nadchodzące wydarzenia związane ze światem sztuki i weź w nich udział.</p>
+
+        <section class="events-list">
+		<h3 class="lt">Lista wydarzeń</h3>
+            <article class="event-card search-item" id="Wystawa_Sztuki_Nowoczesnej" tabindex="0">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">Lip</span>
+                    <span class="year">2026</span>
+                </div>
+                <div class="event-details">
+                    <h3>Wystawa Sztuki Nowoczesnej</h3>
+                    <p>Odkryj najnowsze trendy w sztuce współczesnej. Wystawa prezentuje prace młodych, obiecujących artystów z całej Europy. Malarstwo, instalacje wideo i performance.</p>
+                    <div class="event-info-row">
+                        <span>&#128205; Muzeum Narodowe, Warszawa</span>
+                        <span>&#9200; 18:00 - 21:00</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card search-item" id="Warsztaty_Rzeźby_w_Glinie" tabindex="0">
+                <div class="event-date">
+                    <span class="day">22</span>
+                    <span class="month">Sie</span>
+                    <span class="year">2026</span>
+                </div>
+                <div class="event-details">
+                    <h3>Warsztaty Rzeźby w Glinie</h3>
+                    <p>Praktyczne warsztaty dla początkujących. Naucz się podstaw modelowania w glinie pod okiem mistrza rzeźbiarstwa. Wszystkie materiały zapewnione.</p>
+                    <div class="event-info-row">
+                        <span>&#128205; Pracownia Artystyczna, Kraków</span>
+                        <span>&#9200; 10:00 - 15:00</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="event-card search-item" id="Spacer_Fotograficzny:_Złota_godzina" tabindex="0">
+                <div class="event-date">
+                    <span class="day">05</span>
+                    <span class="month">Wrz</span>
+                    <span class="year">2026</span>
+                </div>
+                <div class="event-details">
+                    <h3>Spacer Fotograficzny: Złota Godzina</h3>
+                    <p>Wspólny plener fotograficzny ulicami Starego Miasta. Dowiedz się, jak wykorzystać naturalne światło o zachodzie słońca, by tworzyć niesamowite portrety i pejzaże.</p>
+                    <div class="event-info-row">
+                        <span>&#128205; Fontanna Neptuna, Gdańsk</span>
+                        <span>&#9200; 17:30 - 20:00</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="event-card search-item" id="Sekrety_Mistrzów_Renesansu" tabindex="0">
+                <div class="event-date">
+                    <span class="day">12</span>
+                    <span class="month">Paź</span>
+                    <span class="year">2026</span>
+                </div>
+                <div class="event-details">
+                    <h3>Sekrety Mistrzów Renesansu</h3>
+                    <p>Wykład otwarty poświęcony technikom malarskim Leonarda da Vinci i Michała Anioła. Analiza ukrytych symboli i kontekstu historycznego dzieł.</p>
+                    <div class="event-info-row">
+                        <span>&#128205; Hala Stulecia, Wrocław</span>
+                        <span>&#9200; 19:00 - 20:30</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <h2 class="lw">Lokalizacje Wydarzeń</h2>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+    </main>
+
+    <section class="form-section">
+        <h2 class="lw">Zapisz się na wydarzenie</h2>
+        <form class="registration-form" id="event-form">
+            <div class="form-group">
+                <label for="name">Imię i Nazwisko:</label>
+                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Adres E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="jan@przyklad.pl">
+            </div>
+
+            <div class="form-group">
+                <label for="event-select">Wybierz wydarzenie:</label>
+                <select id="event-select" name="event" required>
+                    <option value="" disabled selected>-- Wybierz z listy --</option>
+                    <option value="Wystawa Sztuki Nowoczesnej">Wystawa Sztuki Nowoczesnej (Warszawa)</option>
+                    <option value="Warsztaty Rzeźby">Warsztaty Rzeźby (Kraków)</option>
+                    <option value="Spacer Fotograficzny">Spacer Fotograficzny (Gdańsk)</option>
+                    <option value="Sekrety Mistrzów Renesansu">Sekrety Mistrzów Renesansu (Wrocław)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tickets">Liczba biletów:</label>
+                <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Wyślij zgłoszenie</button>
+        </form>
+    </section>
+
+    <button id="up" style="display: none;">
+        <img src="img/up.png" alt="" title="Do góry" aria-label="Do góry">
+    </button>
+
+    <footer style="margin-top: 0;">
+    <p>2025 &copy; Tomasz Cuch, Aleksander Bzowski, Szymon Fidzina | Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+    <script src="events.js"></script>
+
+</body>
+</html>

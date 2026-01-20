@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="alternate" href="/galeria.html" hreflang="pl">
+    <link rel="alternate" href="/en/gallery.html" hreflang="en">
+</head>
+
+<body>
+    <header id="header">
+
+        <div id="search_div_head">
+            <button id="search_head-btn" title="Search" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_head" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+            </button>
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" title="Homepage">
+              <img src="../img/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1 class="title"><a href="index.html" title="Homepage">Art in Focus</a></h1>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="index.html" title="Homepage">Homepage</a></li>
+                    <li><a href="artists.html" title="Artists">Artists</a></li>
+                    <li><a href="gallery.html" title="Gallery" class="active">Gallery</a></li>
+                    <li><a href="events.html" title="Events">Events</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="container">
+
+          <div id="search_div_lang">
+            <button id="search_lang-btn" title="Search" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_lang" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg> 
+            </button>
+          </div>
+
+          <div id="lang-container">
+
+            <img src="../img/lang.png" alt="lang" id="lang">
+            <div id="lang-text">EN</div>
+                <button id="lang-select-btn" title="Change language" aria-label="Change Language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.000000 172.000000"
+                    preserveAspectRatio="xMidYMid meet" id="lang-select" aria-hidden="true">
+                    <g transform="translate(0.000000,172.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                    <path d="M125 1694 c-74 -38 -124 -115 -125 -190 0 -88 12 -101 712 -800 420 -418 676 -667 700 -677 46 -22 130 -22 176 0 24 10 280 259 700 677 700 699 712 712 712 800 -1 77 -65 169 -137 197 -38 14 -121 11 -161 -8 -24 -10 -252 -230 -619 -597 l-583 -581 -582 581 c-368 367 -596 587 -620 597 -45 21 -134 22 -173 1z"/></g></svg> 
+                </button>
+                
+            <div id="lang-menu">
+                <p id="menu-title">Language</p>
+                <div id="menu-text" title="Polski">
+                    <img src="../img/pl.png" alt="" aria-hidden="true" id="flag">
+                    <span id="lang-shortcut">PL</span>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <form id="search_text" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+          preserveAspectRatio="xMidYMid meet" id="search_icon" aria-hidden="true">
+          <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+          <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+          
+          <input type="text" id="search" aria-label="Search" placeholder="Search" maxlength="60" tabindex="0">
+
+          <button id="search_close_btn" type="button" title="Close" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+              preserveAspectRatio="xMidYMid meet" id="search_close" aria-hidden="true">
+              <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+              <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+          
+          <div id="tr"></div>
+        </form>
+
+        <div id="search_results">
+
+            <div id="results"></div>
+
+            <button id="inner_search_close_btn" title="Close" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+                preserveAspectRatio="xMidYMid meet" id="inner_search_close" aria-hidden="true">
+                <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="galeria">
+
+        <h2>Art Gallery</h2>
+        <p>Here is a gallery of works of art divided into paintings, photographs and sculptures.</p>
+
+    </main>
+
+    <nav id="spis">
+        <div class="box" id="b1">
+            <h3><a href="#Painting">Painting</a></h3>
+            <ol>
+                <li><a href="#Mona_Lisa">Mona Lisa</a></li>
+                <li><a href="#The_Scream">The Scream</a></li>
+                <li><a href="#The_Creation_of_Adam">The Creation of Adam</a></li>
+                <li><a href="#The_Starry_Night">The Starry Night</a></li>
+                <li><a href="#The_Card_Players">The Card Players</a></li>
+                <li><a href="#Girl_with_a_Pearl_Earring">Girl with a Pearl Earring</a></li>
+                <li><a href="#Wanderer_above_the_Sea_of_Fog">Wanderer above the Sea of Fog</a></li>
+                <li><a href="#The_Last_Supper">The Last Supper</a></li>
+                <li><a href="#Young_Hare">Young Hare</a></li>
+            </ol>
+        </div>
+        <div class="box" id="b2">
+            <h3><a href="#Sculpture">Sculpture</a></h3>
+            <ol>
+                <li><a href="#Nefertiti_Bust">Nefertiti Bust</a></li>
+                <li><a href="#The_Vatican_Pietà">The Vatican Pietà</a></li>
+                <li><a href="#The_Nike_of_Samothrace">The Nike of Samothrace</a></li>
+                <li><a href="#Stefan_Starzyński_Monument">Stefan Starzyński Monument</a></li>
+                <li><a href="#Boxer_at_Rest">Boxer at Rest</a></li>
+                <li><a href="#Ugolino_and_His_Sons">Ugolino and His Sons</a></li>
+                <li><a href="#Statue_of_Liberty">Statue of Liberty</a></li>
+                <li><a href="#Psyche_and_Cupid">Psyche and Cupid</a></li>
+                <li><a href="#Moai">Moai</a></li>
+            </ol>
+        </div>
+        <div class="box" id="b3">
+        <h3><a href="#Photography">Photography</a></h3>
+            <ol>
+                <li><a href="#Samuel_Morse">Samuel Morse</a></li>
+                <li><a href="#Navajo_medicine_man">Navajo medicine man</a></li>
+                <li><a href="#Samurai_of_the_Satsuma_Clan">Samurai of the Satsuma Clan</a></li>
+                <li><a href="#A_Five-Cent_Apartment">A Five-Cent Apartment</a></li>
+                <li><a href="#Newsboys_smoking">Newsboys smoking</a></li>
+                <li><a href="#Floral_Still_Life">Floral Still Life</a></li>
+                <li><a href="#Bridal_Veil_Falls">Bridal Veil Falls</a></li>
+                <li><a href="#Ragpicker">Ragpicker</a></li>
+                <li><a href="#Luxor">Luxor</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <section id="Painting" class="search-item">
+        <h2>Painting</h2>
+
+        <article id="Mona_Lisa" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Leonardo_da_Vinci" class="artist-link">Leonardo da Vinci</a> – „Mona Lisa”
+            </h3>
+            <img src="../img/o1.webp" alt="Mona Lisa" title="Mona Lisa" class="gallery" tabindex="0">
+            <p class="opis">„Mona Lisa” (c. 1503-1506) is Leonardo da Vinci's most famous painting, considered one of the
+            greatest masterpieces of the Renaissance. It depicts a mysteriously smiling woman seated against a delicate
+            landscape background. The artwork impresses with its extraordinary realism, subtle chiaroscuro modeling
+            (sfumato), and calm, harmonious composition. The portrayed woman – most likely Lisa Gherardini, the wife
+            of a Florentine merchant – has become a symbol of feminine mystery and beauty. Today, the painting is
+            housed in the Louvre Museum in Paris, where it attracts millions of visitors from around the world.</p>
+        </article>
+
+        <article id="The_Scream" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Edvard_Munch" class="artist-link">Edvard Munch</a> – „The Scream”
+            </h3>
+            <img src="../img/o2.jpg" alt="The Scream" title="The Scream" class="gallery" tabindex="0">
+            <p class="opis">„The Scream” (1893) is the most famous work of the Norwegian painter Edvard Munch, regarded
+            as a symbol of existential fear and human anxiety. The painting depicts a figure with a distorted face
+            standing on a bridge, screaming in despair while the sky burns with dramatic, wavy colors. The expressive
+            lines and intense hues convey powerful emotions – fear, loneliness, and terror in the face of the world.
+            The Scream has become one of the most recognizable icons of modern art and a symbol of human unrest.</p>
+        </article>
+
+        <article id="The_Creation_of_Adam" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Michelangelo" class="artist-link">Michelangelo</a> – „The Creation of Adam”
+            </h3>
+            <img src="../img/o3.jpg" alt="The Creation of Adam" title="The Creation of Adam" class="gallery" tabindex="0">
+            <p class="opis">„The Creation of Adam” (c. 1511) is one of the most famous works of Michelangelo,
+            forming part of the frescoes on the ceiling of the Sistine Chapel in the Vatican. It depicts the moment when
+            God reaches out to Adam to breathe life into him – their almost-touching hands symbolize the connection between
+            divinity and humanity. The composition impresses with its dynamic movement, masterful depiction of the human
+            body, and profound spiritual meaning. The Creation of Adam is one of the most recognizable symbols of the
+            Renaissance and a testament to the artist's genius.</p>
+        </article>
+
+        <article id="The_Starry_Night" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Vincent_van_Gogh" class="artist-link">Vincent van Gogh</a> – „The Starry Night”
+            </h3>
+            <img src="../img/o4.jpg" alt="The Starry Night" title="The Starry Night" class="gallery" tabindex="0">
+            <p class="opis">„The Starry Night” (1889) is one of Vincent van Gogh's most famous works, painted during his stay
+            at the psychiatric hospital in Saint-Rémy-de-Provence. The painting depicts a night sky filled with swirling
+            stars and a glowing moon above a quiet village, seen from the artist's window. The dynamic brushstrokes and
+            strong color contrasts convey emotional unrest, yet also a sense of awe at the power of nature. The Starry
+            Night has become a symbol of van Gogh's expressive style and his unique way of perceiving the world.</p>
+        </article>
+
+        <article id="The_Card_Players" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Paul_Cézanne" class="artist-link">Paul Cézanne</a> – „The Card Players”
+            </h3>
+            <img src="../img/o6.jpg" alt="The Card Players" title="The Card Players" class="gallery" tabindex="0">
+            <p class="opis">„The Card Players” (1890-1895) is one of Paul Cézanne's most famous works, depicting two men
+            absorbed in a calm game of cards. The artist created several versions of this motif, presenting an everyday
+            scene in a restrained and balanced manner. The simplified forms, harmonious composition, and warm colors
+            emphasize the concentration and tranquility of the moment. The painting is an excellent example of Cézanne's
+            style, which combined realism with an innovative approach to shape and color, foreshadowing the development
+            of modern art and Cubism.</p>
+        </article>
+
+        <article id="Girl_with_a_Pearl_Earring" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Johannes_Vermeer" class="artist-link">Johannes Vermeer</a>
+                – „Girl with a Pearl Earring”
+            </h3>
+            <img src="../img/o7.jpg" alt="Girl with a Pearl Earring" title="Girl with a Pearl Earring" class="gallery"
+            tabindex="0">
+            <p class="opis">„Girl with a Pearl Earring” (c. 1665) is Johannes Vermeer's most famous painting, often referred
+            to as the „Mona Lisa of the North.” It depicts a young girl wearing an exotic turban and a large, shimmering
+            pearl earring. The subtle light, soft shadows, and delicate expression on her face create an atmosphere of
+            quietness and mystery. Vermeer captured with remarkable precision the moment in which the girl turns her
+            head, as if she were about to speak. The artwork impresses with its simplicity, elegance, and extraordinary
+            play of light, making it one of the iconic masterpieces of Dutch painting.</p>
+        </article>
+
+        <article id="Wanderer_above_the_Sea_of_Fog" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Caspar_David_Friedrich" class="artist-link">Caspar David Friedrich</a>
+                – „Wanderer above the Sea of Fog”
+            </h3>
+            <img src="../img/o8.jpeg" alt="Wanderer above the Sea of Fog" title="Wanderer above the Sea of Fog" class="gallery"
+            tabindex="0">
+            <p class="opis">„Wanderer above the Sea of Fog” (1818) is Caspar David Friedrich's most famous painting and a
+            symbol of Romanticism in art. It depicts a solitary man standing on a rocky peak, gazing out over a vast,
+            fog-covered landscape below. The figure, shown from behind, symbolizes humanity facing the power and mystery
+            of nature. The painting blends melancholy, awe, and reflection on the human place in the world, presenting
+            nature as a realm of spiritual experience and infinity.</p>
+        </article>
+
+        <article id="The_Last_Supper" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Leonardo_da_Vinci" class="artist-link">Leonardo da Vinci</a> – „The Last Supper”
+            </h3>
+            <img src="../img/o9.jpg" alt="The Last Supper" title="The Last Supper" class="gallery" tabindex="0">
+            <p class="opis">„The Last Supper” (1495-1498) is a monumental work by Leonardo da Vinci, painted on the wall of
+            the refectory of the Santa Maria delle Grazie monastery in Milan. The painting depicts the moment when Jesus
+            announces to his disciples that one of them will betray him, causing a sudden surge of emotion among the
+            apostles. Leonardo masterfully portrayed human feelings, gestures, and expressions, and used perspective
+            in a way that directs the viewer's gaze toward Christ at the center. The work combines spiritual depth with
+            perfect composition and stands as one of the most important symbols of Renaissance art.</p>
+        </article>
+
+        <article id="Young_Hare" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Albrecht_Dürer" class="artist-link">Albrecht Dürer</a> – „Young Hare”
+            </h3>
+            <img src="../img/o10.jpg" alt="Young Hare" title="Young Hare" class="gallery" tabindex="0">
+            <p class="opis">„Young Hare” (1502) is a famous watercolor by Albrecht Dürer and one of the finest examples of his
+            mastery in observing nature. The artist rendered every detail of the animal with extraordinary precision - the
+            soft fur, the glimmer in its eye, and the subtle light falling on its body. The work captivates with its
+            realism and delicate execution, while also expressing Dürer's deep respect for nature. Young Hare has
+            become an icon of Renaissance art and a symbol of technical perfection in painting and drawing.</p>
+        </article>
+    </section>
+
+    <section id="Sculpture" class="search-item">
+        <h2>Sculpture</h2>
+
+        <article id="Nefertiti_Bust" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Thutmose" class="artist-link">Thutmose</a> – „Nefertiti Bust”
+            </h3>
+            <img src="../img/nef.jpg" alt="Nefertiti Bust" title="Nefertiti Bust" class="gallery" tabindex="0">
+            <p class="opis">„The Nefertiti Bust” (c. 1345 BCE) is one of the most famous works of ancient Egyptian art,
+            attributed to the sculptor Thutmose. It depicts Queen Nefertiti, the wife of Pharaoh Akhenaten, known for
+            her extraordinary beauty and elegance. The sculpture impresses with its perfect proportions, subtle modeling
+            of the face, and the queen's delicate smile. The characteristic tall crown and the preserved traces of colorful
+            decoration emphasize the majesty and dignity of the figure. The bust has become a symbol of beauty, harmony,
+            and the craftsmanship of ancient Egyptian art.</p>
+        </article>
+
+        <article id="The_Vatican_Pietà" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Michelangelo" class="artist-link">Michelangelo</a> – „The Vatican Pietà”
+            </h3>
+            <img src="../img/r4.jpg" alt="The Vatican Pietà" title="The Vatican Pietà" class="gallery" tabindex="0">
+            <p class="opis">„The Vatican Pietà” is one of the most famous sculptural works in the history of art,
+                created by Michelangelo between 1498 and 1499. The sculpture, currently located in St. Peter's
+                Basilica in the Vatican, depicts the Virgin Mary mourning over the dead body of Jesus Christ
+                shortly after his removal from the cross. It is the only sculpture on which Michelangelo placed
+                his signature, visible on the sash running across Mary's chest.</p>
+        </article>
+
+        <article id="The_Nike_of_Samothrace" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Pythokritos" class="artist-link">Pythokritos</a> – „The Nike of Samothrace”
+            </h3>
+            <img src="../img/r5.jpg" alt="The Nike of Samothrace" title="The Nike of Samothrace"
+            class="gallery" tabindex="0">
+            <p class="opis">„The Nike of Samothrace” (c. 190 BCE) is a Hellenistic sculpture depicting the Greek goddess
+            of victory, Nike. She is shown in dynamic motion, as if she has just landed on the prow of a ship, with
+            a strong wind billowing her drapery, emphasizing the power and drama of the scene. Despite the absence
+            of her head and arms, the work captivates with its masterful rendering of movement and expression.
+            The sculpture is currently housed in the Louvre Museum in Paris and is regarded as one of the greatest
+            achievements of Hellenistic art.</p>
+        </article>
+
+        <article id="Stefan_Starzyński_Monument" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Ludwika_Nitschowa" class="artist-link">Ludwika Nitschowa</a>
+                – „Stefan Starzyński Monument”
+            </h3>
+            <img src="../img/pss.jpg" alt="Stefan Starzyński Monument" title="Stefan Starzyński Monument"
+            class="gallery" tabindex="0">
+            <p class="opis">The Monument of Stefan Starzyński, by Ludwika Nitschowa, depicts the Mayor of Warsaw
+                as a symbol of courage, responsibility, and dedication to the city. The sculpture shows Starzyński
+                in a focused and dignified posture, emphasizing his role as a leader who stayed with the
+                residents of Warsaw during the 1939 siege. The monument commemorates his patriotism and
+                unwavering stance in the face of danger.</p>
+        </article>
+
+        <article id="Boxer_at_Rest" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Apollonios_of_Athens" class="artist-link">Apollonios of Athens</a> – „Boxer at Rest”
+            </h3>
+            <img src="../img/op.jpg" alt="Boxer at Rest" title="Boxer at Rest" class="gallery" tabindex="0">
+            <p class="opis">„Boxer at Rest” is an ancient Hellenistic sculpture depicting a fatigued athlete after
+                a fight. The realistically rendered wounds, swollen face, and tense body emphasize effort, pain,
+                and the fragility of human strength. The sculpture stands out for its remarkable realism and
+                emotional intensity, portraying the hero not at the moment of triumph, but in a state of
+                exhaustion and reflection.</p>
+        </article>
+
+        <article id="Ugolino_and_His_Sons" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Jean-Baptiste_Carpeaux" class="artist-link">Jean-Baptiste Carpeaux</a>
+                – „Ugolino and His Sons”
+            </h3>
+            <img src="../img/uo.jpg" alt="Ugolino and His Sons" title="Ugolino and His Sons" class="gallery" tabindex="0">
+            <p class="opis">„Ugolino and His Sons” is a dramatic sculpture by Jean-Baptiste Carpeaux,
+                inspired by Dante's Divine Comedy. It depicts Count Ugolino at a moment of extreme suffering,
+                surrounded by his starving sons. The expressive form, tense muscles, and gestures of the figures
+                emphasize despair, helplessness, and a tragic choice, making the sculpture one of the most powerful
+                examples of emotional realism in the 19th century.</p>
+        </article>
+
+        <article id="Statue_of_Liberty" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Frédéric-Auguste_Bartholdi" class="artist-link">Frédéric-Auguste Bartholdi</a>
+                – „Statue of Liberty”
+            </h3>
+            <img src="../img/sw.jpg" alt="Statue of Liberty" title="Statue of Liberty" class="gallery" tabindex="0">
+            <p class="opis">The Statue of Liberty is a monumental sculpture in New York, designed by Frédéric
+                Auguste Bartholdi and gifted by France in 1886. It depicts a woman holding a torch and a tablet
+                inscribed with the date of the U.S. Declaration of Independence, symbolizing freedom, democracy,
+                and hope. Due to its immense size and striking symbolism, it has become one of the most
+                recognizable symbols in the world.</p>
+        </article>
+
+        <article id="Psyche_and_Cupid" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Antonio_Canova" class="artist-link">Antonio Canova</a> – „Psyche and Cupid”
+            </h3>
+            <img src="../img/pk.jpg" alt="Psyche and Cupid" title="Psyche and Cupid" class="gallery" tabindex="0">
+            <p class="opis">„Psyche and Cupid” is a classical sculpture by Antonio Canova, depicting a moment of
+                loving rapture between Psyche and Cupid. The delicate, harmonious bodies and subtle gestures
+                convey affection, trust, and the beauty of idealized forms. The sculpture is one of the most
+                important examples of Neoclassicism, combining anatomical perfection with poetic emotional
+                expression.</p>
+        </article>
+        
+        <article id="Moai" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                Rapa Nui – „Moai”
+            </h3>
+            <img src="../img/mo.jpg" alt="Moai" title="Moai" class="gallery" tabindex="0">
+            <p class="opis">The moai are over 900 statues carved by the Rapa Nui people between 1250 and 1500.
+                Although we most commonly associate them with their massive heads, most of them also have torsos
+                buried underground. The average height of a statue is about 4 meters, and their transport and erection
+                remain subjects of study and engineering admiration to this day.</p>
+        </article>
+    </section>
+
+    <section id="Photography" class="search-item">
+        <h2>Photography</h2>
+
+        <article id="Samuel_Morse" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Mathew_B._Brady" class="artist-link">Mathew B. Brady</a> – „Samuel Morse”
+            </h3>
+            <img src="../img/b1.jpg" alt="Samuel_Morse" title="Samuel_Morse"
+            class="gallery" tabindex="0">
+            <p class="opis">This photograph by Mathew B. Brady depicts the American inventor and artist,
+                the creator of the telegraph and the Morse code. The portrait is rendered in the formal
+                studio style characteristic of 19th-century photography, emphasizing the subject's seriousness
+                and intellectual authority. The image constitutes a valuable document of the era of early
+                modernity and the history of communication.</p>
+        </article>
+
+        <article id="Navajo_medicine_man" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Edward_S._Curtis" class="artist-link">Edward S. Curtis</a> – „Navajo medicine man”
+            </h3>
+            <img src="../img/nm.jpg" alt="Navajo medicine man" title="Navajo medicine man"
+            class="gallery"
+            tabindex="0">
+            <p class="opis">This is a historical photograph taken around 1904 by Edward S. Curtis, depicting
+                Nesjaja Hatali, a renowned medicine man and a member of the Navajo (Diné) people. The
+                image is a portrait of an elderly man wearing traditional clothing and jewelry, presenting
+                an important figure in the culture and medicine of Native Americans in the early 20th century.
+                The photograph comes from The North American Indian series, an extensive project documenting
+                the lives and customs of the Indigenous peoples of the Americas.</p>
+        </article>
+
+        <article id="Samurai_of_the_Satsuma_Clan" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Felice_Beato" class="artist-link">Felice Beato</a> – „Samurai of the Satsuma Clan”
+            </h3>
+            <img src="../img/sam.jpg" alt="Samurai of the Satsuma Clan" title="Samurai of the Satsuma Clan"
+            class="gallery" tabindex="0">
+            <p class="opis">„Samurai of the Satsuma Clan” is a historical photograph depicting members of the
+                Satsuma (Shimazu) samurai clan, taken around the 1860s (circa 1867) by photographer Felice Beato.
+                It shows a group of samurai during the Boshin War–a conflict in which Satsuma was a key ally of the
+                forces seeking to overthrow the shogunate and restore imperial rule in Japan. The photograph
+                captures their traditional attire, weapons, and stances, and stands as one of the earliest
+                surviving images of Japanese warriors of this class during a period of profound social
+                and political transformation in Japan.</p>
+        </article>
+
+        <article id="A_Five-Cent_Apartment" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Jacob_Riis" class="artist-link">Jacob Riis</a> – „A Five-Cent Apartment”
+            </h3>
+            <img src="../img/f3.jpg" alt="A Five-Cent Apartment" title="A Five-Cent Apartment"
+            class="gallery" tabindex="0">
+            <p class="opis">This is a black-and-white photograph taken by Jacob Riis in 1889 in New York City.
+                It depicts a very cramped and overcrowded room in a tenement building, where poor residents–often
+                immigrants–paid five cents for a place to sleep for the night. The image reveals the realities
+                of life among the poorest social classes in the 19th-century city: appalling sanitary conditions,
+                a lack of space and privacy, and the harsh everyday existence of people who could not afford
+                better housing. Riis published such photographs to raise public awareness of the severity
+                of the situation and to help bring about reforms in housing conditions in urban slums.</p>
+        </article>
+
+        <article id="Newsboys_smoking" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Lewis_Hine" class="artist-link">Lewis Hine</a> – „Newsboys smoking”
+            </h3>
+            <img src="../img/pg.jpg" alt="Newsboys smoking" title="Newsboys smoking" class="gallery" tabindex="0">
+            <p class="opis">This is a historical photograph taken by Lewis Hine, depicting newsboy children
+                on the streets of St. Louis, Missouri, in 1910, holding and smoking cigarettes during a break
+                from work. The photograph illustrates the realities of life for young street workers in the
+                early decades of the 20th century–children earning money by selling newspapers often grew up
+                faster than their peers, and such images highlight the harsh working conditions and everyday
+                habits shaped by the street culture of the era. Hine used his photographs as a tool to document
+                child labor and to support reforms against child labor in the United States.</p>
+        </article>
+
+        <article id="Floral_Still_Life" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Adolphe_Braun" class="artist-link">Adolphe Braun</a> – „Floral Still Life”
+            </h3>
+            <img src="../img/mn.jpg" alt="Floral Still Life" title="Floral Still Life" class="gallery" tabindex="0">
+            <p class="opis">„Floral Still Life” by Adolphe Braun is a classic example of a still-life composition
+                in which the artist presents inanimate objects arranged in a harmonious composition. The photograph
+                dates from the 19th century and is characterized by careful attention to detail, light, and the
+                texture of the objects, transforming ordinary elements of everyday life into works of art.
+                Braun's works were among the first to treat photography as a medium of artistic expression rather
+                than merely a documentary tool, and they had a significant influence on the development of
+                photographic still life in Europe.</p>
+        </article>
+
+        <article id="Bridal_Veil_Falls" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Carleton_Watkins" class="artist-link">Carleton Watkins</a> – „Bridal Veil Falls”
+            </h3>
+            <img src="../img/bv.jpg" alt="Bridal Veil Falls" title="Bridal Veil Falls" class="gallery" tabindex="0">
+            <p class="opis">“Bridal Veil Falls”, a photograph by Carleton Watkins, depicts a picturesque
+                waterfall in California, whose cascading water resembles a delicate bridal veil. Taken in
+                the 19th century, the photograph captures both the monumentality of nature and the precise
+                composition characteristic of Watkins's work, which documented the landscapes of the western
+                United States during the period of exploration of Yosemite and its surrounding areas.</p>
+        </article>
+
+        <article id="Ragpicker" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Eugène_Atget" class="artist-link">Eugène Atget</a> – „Ragpicker”
+            </h3>
+            <img src="../img/l.jpg" alt="Ragpicker" title="Ragpicker" class="gallery" tabindex="0">
+            <p class="opis">„Ragpicker” by Eugène Atget depicts a scrap or rag collector in Paris at the
+                beginning of the 20th century. The image portrays the everyday life of urban workers from
+                the lowest social class–their labor and living conditions–captured in Atget's characteristically
+                austere, documentary style. The photograph is part of Atget's broader project documenting old
+                Paris, disappearing professions, and the city's architecture, and it stands as an important
+                socio-historical record as well as an example of early documentary photography.</p>
+        </article>
+
+        <article id="Luxor" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artists.html#Francis_Frith" class="artist-link">Francis Frith</a> – „Luxor”
+            </h3>
+            <img src="../img/lux.jpg" alt="Luxor" title="Luxor" class="gallery" tabindex="0">
+            <p class="opis">This photograph by Francis Frith is a historical image depicting the city of
+                Luxor in Egypt, its monuments, and ancient ruins, taken in the mid-19th century. Frith,
+                a renowned British travel photographer, captured the monumental columns, temples, and the
+                landscape of the Nile, combining archaeological documentation with artistic aesthetics.
+                The photograph is an example of early travel and Orientalist photography, intended to present
+                Europe with exotic locations and the ancient culture of Egypt.</p>
+        </article>
+    </section>
+
+
+    <div id="lightbox" role="dialog" aria-modal="true">
+        <button class="close" aria-label="Close preview">✖</button>
+        <img class="lightbox-content" id="lightbox-img"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
+        <button class="nav lbprev" aria-label="Previous image">&#10094;</button>
+        <button class="nav lbnext" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <button id="up" style="display: none;">
+        <img src="../img/up.png" alt="" title="Back to top" aria-label="Back to top">
+    </button>
+
+    <footer style="margin-top: 0;">
+    <p>2025 © Tomasz Cuch, Aleksander Bzowski, Szymon Fidzina | All rights reserved</p>
+    </footer>
+
+    <script src="../gallery.js"></script>
+
+</body>
+</html>

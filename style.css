@@ -1,0 +1,2863 @@
+html
+{
+    scroll-behavior: smooth;
+    scroll-padding-top: 2em;
+}
+
+body
+{
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #555555;
+    color: #ffffff; 
+    padding: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: top 0.4s ease;
+    z-index: 1000;
+}
+
+header.hidden
+{
+    top: -100%;
+}
+
+.logo-container
+{
+    height: fit-content;
+    width: max-content;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container
+{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    width: 144.6px;
+    height: 24px;
+    background-color: #000000;
+    padding: 0.6em 0;
+    border-radius: 9px;
+    transform: translateY(-50%);
+}
+
+#search_div_lang
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em;
+    -webkit-user-drag: none;
+}
+
+#lang-container
+{
+    right: 0;
+    padding: 0.6em;
+    border-radius: 9px;
+    -webkit-user-drag: none;
+}
+
+#search_div_head
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    padding: 9.6px;
+    display: none;
+}
+
+#search_head-btn, #search_lang-btn
+{
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#search_head, #search_lang
+{
+    color: #ffffff;
+    display: block;
+    box-sizing: content-box;
+    height: 24px;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#search_head-btn:hover, #search_lang-btn:hover
+{
+    cursor: pointer;
+}
+
+#search_head-btn:hover #search_head, #search_lang-btn:hover #search_lang
+{
+    color: #11b8ff;
+}
+
+#search_head-btn:focus, #search_lang-btn:focus
+{
+    outline: none;
+}
+
+#search_head:focus, #search_lang:focus
+{
+    outline: none;
+}
+
+#search_head-btn:focus-visible, #search_lang-btn:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 3px;
+}
+
+#search_text
+{
+    top: 124px;
+    display: none;
+    align-items: center;
+    position: absolute;
+    z-index: 1100;
+    background-color: #ffffff;
+    width: 100%;
+    height: 24px;
+    padding: 1em 0;
+    border-bottom: 0.4em solid #222222;
+    color: #000000;
+    transition: padding 0.3s ease-in-out;
+}
+
+#search_icon
+{
+    flex-shrink: 0;
+    display: block;
+    color: #000000;
+    box-sizing: content-box;
+    height: 24px;
+    margin: 0 2em;
+}
+
+#search
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 100%;
+    border: none;
+    color: #000000;
+    font-size: 1.1em;
+    padding: 16px 0;
+}
+
+#search::placeholder
+{
+    color: #c2c2c2;
+    font-weight: 500;
+}
+
+#search:focus-visible
+{
+    outline: none;
+}
+
+#search_close_btn
+{
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-sizing: content-box;
+    margin: 0 2em;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#search_close
+{
+    flex-shrink: 0;
+    box-sizing: content-box;
+    color: #000000;
+    width: 24px;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#search_close_btn:hover
+{
+    cursor: pointer;
+}
+
+#search_close_btn:hover #search_close
+{
+    color: #11b8ff;
+}
+
+#search_close_btn:focus
+{
+    outline: none;
+}
+
+#search_close:focus
+{
+    outline: none;
+}
+
+#search_close_btn:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 6px;
+}
+
+#search_results
+{
+    display: none;
+    position: absolute;
+    top: 186.4px;
+    left: 0;
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 2px solid #222222;
+}
+
+#results
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 2em;
+    font-size: 1.4em;
+    gap: 0.5em;
+    z-index: 1100;
+}
+
+#search-results-link
+{
+    scroll-margin-bottom: 0;
+}
+
+#results a
+{
+    margin: 0;
+    width: fit-content;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+    height: auto;
+    line-height: 1.4em;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#results a:hover
+{
+    cursor: pointer;
+    color: #11b8ff;
+}
+
+#results a:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 4px;
+}
+
+mark
+{
+    color: #11b8ff;
+    background: none;
+}
+
+#tr
+{
+    background-color: #222222;
+    position: absolute;
+    left: 68.18px;
+    bottom: -4px;
+    height: 8px;
+    width: 8px;
+    transform: rotate(45deg);
+}
+
+#inner_search_close_btn
+{
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    color: #000000;
+    width: 18px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#inner_search_close
+{
+    width: 18px;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#inner_search_close_btn:hover
+{
+    cursor: pointer;
+}
+
+#inner_search_close_btn:hover #inner_search_close
+{
+    color: #11b8ff;
+}
+
+#inner_search_close_btn:focus
+{
+    outline: none;
+}
+
+#inner_search_close:focus
+{
+    outline: none;
+}
+
+#inner_search_close_btn:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 6px;
+}
+
+#lang-container
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+#lang
+{
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#lang-text
+{
+    text-align: center;
+    height: fit-content;
+    width: 1.8em;
+    font-size: 1.35em;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 1px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#lang-select
+{
+    color: #ffffff;
+    width: 19px;
+    height: 19px;
+    -webkit-user-drag: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#lang-select-btn
+{
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#lang-select-btn.rotated
+{
+    transform: rotate(180deg);
+}
+
+#lang-select-btn:hover
+{
+    cursor: pointer;
+}
+
+#lang-select-btn:hover #lang-select
+{
+    color: #11b8ff;
+}
+
+#lang-select:focus
+{
+    outline: none;
+}
+
+#lang-select-btn:focus
+{
+    outline: none;
+}
+
+#lang-select-btn:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 3px; 
+}
+
+#lang-menu
+{
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background: #222222;
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transform-origin: top;
+    pointer-events: none;
+    transition:
+        max-height 0.7s ease,
+        padding 0.7s ease,
+        opacity 0.3s ease;
+
+}
+
+#lang-menu.visible
+{
+    z-index: 9999;
+    opacity: 1;
+    max-height: 250px;
+    padding-top: 9.6px;
+    pointer-events: auto;
+    transition:
+        max-height 0.7s ease,
+        padding 0.7s ease,
+        opacity 0.3s ease;
+}
+
+#lang-menu p
+{
+    font-size: 1.2em;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 9.6px;
+    user-select: none;
+}
+
+#menu-text
+{
+    height: 18px;
+    width: 100%;
+    padding: 9.6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#lang-shortcut
+{
+    height: 18px;
+    font-size: 1.26em;
+    line-height: 18px;
+    letter-spacing: 0.9px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#menu-text:hover
+{
+    cursor: pointer;
+    color: #11b8ff;
+}
+
+#menu-text:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: -7px;
+}
+
+#flag
+{
+    height: 100%;
+    object-fit: contain;
+    margin-right: 12px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+a img
+{
+    vertical-align: middle;
+}
+
+.logo
+{
+    height: 6em;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    clip-path: circle(50%);
+    -webkit-user-drag: none;
+}
+
+.logo:focus-visible
+{
+    outline: none;
+}
+
+.logo:hover
+{
+    cursor: pointer;
+    transform: rotate(5deg) scale(1.05);
+}
+
+.logo-container a
+{
+    transition: all 0.2s ease-in-out;
+}
+
+.logo-container a:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 4px;
+}
+
+.title
+{
+    text-align: center;
+    margin: 0;
+    padding: 14px 0;
+}
+
+.title a
+{
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.title a:hover
+{
+    cursor: pointer;
+}
+
+.title a:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 6px;
+}
+
+.types
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5em;
+}
+
+.types h2
+{
+    background-color: #222222;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    padding: 32px 0 32px 0;
+    margin: 0;
+}
+
+.content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.txt-box p.content
+{
+    margin-top: 1em;
+}
+
+.type
+{
+    max-width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 3vw;
+    background: #828282;
+    background: linear-gradient(180deg, rgba(130, 130, 130, 1) 0%, rgba(189, 187, 187, 1) 63%, rgba(209, 207, 207, 1) 100%);
+    border-radius: 1em;
+    box-shadow: 8px 16px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
+.type.show:nth-child(1)
+{
+    animation: slideInLeft 1s ease-out forwards;
+}
+.type.show:nth-child(2)
+{
+    animation: slideInUp 1s ease-out forwards;
+}
+.type.show:nth-child(3)
+{
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.img-box
+{
+    background-color: #111111;
+    padding: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.txt-box
+{
+    padding: 1em;
+}
+
+.txt-box .content
+{
+    text-align: left;
+    color: #000000;
+    text-align: center;
+    font-size: 17px;
+}
+
+.txt-box .title
+{
+    text-align: center;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.txt-box .title a
+{
+    color: #000000;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.type img
+{
+    display: block;
+    width: 10em;
+    transition: all 0.5s ease;
+    -webkit-user-drag: none;
+}
+
+.type img:hover
+{
+    transform: scale(1.6);
+    border-radius: 30%;
+}
+
+.main_nav
+{
+    width: fit-content;
+    background-color: #000000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.main_nav ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    margin: 0;
+}
+
+.main_nav a
+{
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1em;
+    border-radius: 1em;
+    position: relative;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.main_nav a.active
+{
+    color: #11b8ff;
+}
+
+.main_nav a.active::after
+{
+    transform: scaleX(1);
+}
+
+.main_nav a:hover
+{
+    color: #11b8ff;
+}
+
+.main_nav a:focus-visible
+{
+    outline: 3px solid #11b8ff;
+    outline-offset: -2px;
+}
+
+.main_nav a::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #11b8ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.main_nav a:hover::after
+{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.slider
+{
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 60vh;
+    margin-bottom: 1.5em;
+    padding: 2em 0;
+}
+
+.slides
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 26em;
+    width: 100%;
+}
+
+.slide
+{
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: 0;
+}
+
+.slide.active
+{
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    opacity: 1;
+    z-index: 1;
+}
+
+.slides img
+{
+    height: 100%;
+    -webkit-user-drag: none;
+}
+
+.slider-buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    font-size: 1.8em;
+}
+
+#prev, #next
+{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#prev:hover, #next:hover
+{
+    cursor: pointer;
+}
+
+.prev, .next
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: auto;
+    -webkit-user-drag: none;
+}
+
+#prev:focus-visible, #next:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 10px;
+    scroll-margin-top: 400px;
+}
+
+#pierwszy, #drugi, #trzeci
+{
+    background-color: #000000;
+    height: 0.5em;
+    width: 4.1em;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#pierwszy.active, #drugi.active, #trzeci.active
+{
+    background-color: #11b8ff;
+}
+
+#pierwszy:focus-visible, #drugi:focus-visible, #trzeci:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 10px;
+}
+
+main
+{
+    margin-top: 1em;
+    padding: 2em;
+    text-align: center;
+}
+
+main h2
+{
+    font-size: 2em;
+}
+
+main p
+{
+    font-size: 17px;
+}
+
+.content #Malarstwo, .content #Rzeźba, .content #Fotografia
+{
+    scroll-margin-top: 2em;
+}
+
+.content #Painting, .content #Sculpture, .content #Photography
+{
+    scroll-margin-top: 2em;
+}
+
+.content #Malarstwo a:hover, .content #Painting a:hover
+{
+    color: rgb(187, 0, 0);
+}
+
+.content #Rzeźba a:hover, .content #Sculpture a:hover
+{
+    color: rgb(23, 155, 0);
+}
+
+.content #Fotografia a:hover, .content #Photography a:hover
+{
+    color: rgb(185, 3, 149);
+}
+
+.content #Malarstwo a:focus-visible, .content #Painting a:focus-visible
+{
+    cursor: pointer;
+    outline: 3px solid rgb(187, 0, 0);
+    outline-offset: 10px;
+}
+
+.content #Rzeźba a:focus-visible, .content #Sculpture a:focus-visible
+{
+    cursor: pointer;
+    outline: 3px solid rgb(23, 155, 0);
+    outline-offset: 10px;
+}
+
+.content #Fotografia a:focus-visible, .content #Photography a:focus-visible
+{
+    cursor: pointer;
+    outline: 3px solid rgb(185, 3, 149);
+    outline-offset: 10px;
+}
+
+.gallery-article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2em;
+}
+
+.gallery
+{
+    -webkit-user-drag: none;
+}
+
+.gallery:hover
+{
+    cursor: pointer;
+}
+
+#Malarstwo .gallery:focus-visible, #Painting .gallery:focus-visible
+{
+    cursor: pointer;
+    outline: 8px inset rgb(187, 0, 0);
+}
+
+#Rzeźba .gallery:focus-visible, #Sculpture .gallery:focus-visible
+{
+    cursor: pointer;
+    outline: 8px inset rgb(23, 155, 0);
+}
+
+#Fotografia .gallery:focus-visible, #Photography .gallery:focus-visible
+{
+    cursor: pointer;
+    outline: 8px inset rgb(185, 3, 149);
+}
+
+.opis
+{
+    margin: 0;
+    font-size: 17px;
+    color: #ffffff;
+    max-width: 70vw;
+    padding: 1em;
+    text-align: justify;
+    border-radius: 8px;
+    border: 7px double #ffffff;
+}
+
+#Malarstwo .opis, #Painting .opis
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#Fotografia .opis, #Photography .opis
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#Rzeźba .opis, #Sculpture .opis
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.opis:last-child
+{
+    margin-bottom: 2em;
+}
+
+#Malarstwo h2, #Painting h2
+{
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+    font-size: 1.9em;
+    padding: 32px 0 32px 0;
+    margin: 0;
+}
+
+#Fotografia h2, #Photography h2
+{
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+    font-size: 1.9em;
+    padding: 32px 0 32px 0;
+    margin: 0;
+}
+
+#Rzeźba h2, #Sculpture h2
+{
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+    font-size: 1.9em;
+    padding: 32px 0 32px 0;
+    margin: 0;
+}
+
+.gallery_artist
+{ 
+    padding: 0.7em;
+    text-align: center;
+    margin: 0;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
+
+.gallery_artist a
+{
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.gallery_artist a:hover
+{
+    cursor: pointer;
+    color: #11b8ff;
+}
+
+.gallery_artist a:focus-visible
+{
+    cursor: pointer;
+    outline: 2px solid #11b8ff;
+    outline-offset: 2px;
+}
+
+section#Malarstwo, section#Painting
+{
+    counter-reset: obrazy;
+}
+
+section#Malarstwo article .gallery_artist::before, section#Painting article .gallery_artist::before
+{
+    counter-increment: obrazy;
+    content: counter(obrazy) ". ";
+    color: rgb(187, 0, 0);
+}
+
+section#Rzeźba, section#Sculpture
+{
+    counter-reset: rzezby;
+}
+
+section#Rzeźba article .gallery_artist::before, section#Sculpture article .gallery_artist::before
+{
+    counter-increment: rzezby;
+    content: counter(rzezby) ". ";
+     color: rgb(23, 155, 0);
+}
+
+section#Fotografia, section#Photography
+{
+    counter-reset: fotografie;
+}
+
+section#Fotografia article .gallery_artist::before, section#Photography article .gallery_artist::before
+{
+    counter-increment: fotografie;
+    content: counter(fotografie) ". ";
+    color: rgb(185, 3, 149);
+}
+
+#spis
+{
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto;
+    background-color: #cacaca;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 3em;
+    padding-bottom: 0;
+    box-shadow: 8px 16px 4px rgba(0, 0, 0, 0.4);
+}
+
+.box
+{
+    padding: 0;
+    border-right: 2px solid;
+    border-image: linear-gradient(0deg, #c2c2c2, #111111) 1;
+}
+
+.box ol li:first-child
+{
+    margin-top: 6px;
+}
+
+.box ol
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    width: fit-content;
+    padding: 0 0.6em 0.6em 2em;
+}
+
+#b3
+{
+    border: none;
+}
+
+#spis a
+{
+    text-decoration: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#spis h3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.1em;
+    background-color: #111111;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#spis h3 a
+{
+    display: block;
+    flex-grow: 1;
+    color: #ffffff;
+    padding: 5px;
+}
+
+#b1 h3
+{
+    border-top-left-radius: 5px;
+}
+
+#b3 h3
+{
+    border-top-right-radius: 5px;
+}
+
+#b1 h3 a:focus-visible
+{
+    outline: 5px solid rgb(187, 0, 0);
+    outline-offset: -3px;
+}
+
+#b2 h3 a:focus-visible
+{
+    outline: 5px solid rgb(23, 155, 0);
+    outline-offset: -3px;
+}
+
+#b3 h3 a:focus-visible
+{
+    outline: 5px solid rgb(185, 3, 149);
+    outline-offset: -3px;
+}
+
+#spis ol a
+{
+    color: #333333;
+    font-weight: normal;
+}
+
+#b1 a:hover, #b1 a h3:hover
+{
+    color: rgb(187, 0, 0);
+}
+
+#b1 ol a:hover, #b1 ol a:focus-visible
+{
+    text-decoration: underline;
+    color: rgb(187, 0, 0);
+    outline: none;
+}
+
+#b2 a:hover, #b2 a h3:hover
+{
+    color: rgb(23, 155, 0);
+}
+
+#b2 ol a:hover, #b2 ol a:focus-visible
+{
+    text-decoration: underline;
+    color: rgb(23, 155, 0);
+    outline: none;
+}
+
+#b3 a:hover, #b3 a h3:hover
+{
+    color: rgb(185, 3, 149);
+}
+
+#b3 ol a:hover, #b3 ol a:focus-visible
+{
+    text-decoration: underline;
+    color: rgb(185, 3, 149);
+    outline: none;
+}
+
+section#Malarstwo, section#Painting
+{
+    background: #000000 url("img/pedzle.jpg") no-repeat fixed center bottom;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#Malarstwo img, section#Painting img
+{
+    max-width: 70vw;
+    max-height: 60vh;
+    margin: 1em 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px) scale(0.90);
+    transition: all 0.2s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+section#Malarstwo img.show, section#Painting img.show
+{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+section#Fotografia, section#Photography
+{
+    background: #000000 url("img/aparat.jpg") no-repeat fixed right top;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#Fotografia img, section#Photography img
+{
+    max-width: 70vw;
+    max-height: 60vh;
+    margin: 1em 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px) scale(0.90);
+    transition: all 0.2s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+#Fotografia img.show, #Photography img.show
+{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+section#Rzeźba, section#Sculpture
+{
+    background: #000000 url("img/rzezba.jpg") no-repeat fixed center top;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#Rzeźba img, section#Sculpture img
+{
+    max-width: 70vw;
+    max-height: 60vh;
+    margin: 1em 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px) scale(0.90);
+    transition: all 0.2s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+#Rzeźba img.show, #Sculpture img.show
+{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+footer
+{
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2em;
+    padding: 0.5em 0;
+}
+
+#up
+{
+    display: none;
+    transform: translateY(5em);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out, outline 0.2s ease-in-out;
+}
+
+#up img
+{
+    height: 2em;
+    -webkit-user-drag: none;
+}
+
+#up.visible
+{
+    display: flex;
+    transform: translateY(0);
+    z-index: 1001;
+}
+
+#up:hover
+{
+    background-color: #11b8ff;
+}
+
+#up:focus-visible
+{
+    outline: 3px solid #11b8ff;
+    outline-offset: 8px;
+}
+
+.burger
+{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.burger:hover span
+{
+    background: #11b8ff;
+}
+
+.burger:focus-visible
+{
+    outline: 2px solid #11b8ff;
+    outline-offset: 8px;
+}
+
+.burger span
+{
+    top: 0;
+    left: 0;
+    display: block;
+    height: 0.5em;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger.active span:nth-child(1)
+{
+    background-color: #fc2803;
+    transform: rotate(45deg) translate(11.9px, 11.8px);
+}
+.burger.active span:nth-child(2)
+{
+    display: none;
+}
+.burger.active span:nth-child(3)
+{
+    background-color: #fc2803;
+    transform: rotate(-45deg) translate(11.7px, -11.5px);
+}
+
+#lightbox
+{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 5vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#lightbox img
+{
+    display: block;
+    margin: auto;
+    max-width: 75vw;
+    max-height: 75vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.4s ease;
+}
+
+.close
+{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 70px;
+    line-height: 1;
+    cursor: pointer;
+    background: none;
+    border: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.close:hover
+{
+    color: #11b8ff;
+}
+
+.close:focus-visible
+{
+    outline: 4px solid #11b8ff;
+    outline-offset: 10px;
+}
+
+.nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 250%;
+    padding: 2%;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav:hover
+{
+    color: #11b8ff;
+}
+
+.lbprev
+{
+    left: 3%;
+    user-select: none;
+}
+
+.lbnext
+{
+    right: 3%;
+    user-select: none;
+}
+
+.lbprev:focus-visible
+{
+    outline: 4px solid #11b8ff;
+}
+
+.lbnext:focus-visible
+{
+    outline: 4px solid #11b8ff;
+}
+
+
+
+
+/* --- Style dla podstrony Kontakt --- */
+
+.contact-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%; 
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;             
+    box-sizing: border-box;    
+    padding: 0.8em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #11b8ff;
+}
+
+.submit-btn {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.submit-btn:hover {
+    background-color: #11b8ff;
+}
+
+.social-section {
+    margin: 3em auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em; 
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 30px; 
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    border: none;
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; 
+}
+
+.social-btn.facebook {
+    background-color: #1877F2; 
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+
+.social-btn.x-twitter {
+    background-color: #000000; 
+}
+
+.social-btn:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    filter: brightness(1.1); 
+    color: #fff; 
+}
+
+.social-btn:focus-visible {
+    outline: 3px solid #333;
+    outline-offset: 3px;
+}
+
+.success-message {
+    text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 2px solid #11b8ff;
+    animation: fadeIn 0.5s ease;
+    box-sizing: border-box;
+}
+
+.success-message h3 {
+    color: #11b8ff;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.success-icon {
+    font-size: 3em;
+    color: #11b8ff;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+/* --- Style dla podstrony Artyści (Lista) --- */
+
+.artysci-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em 1em;
+    padding-top: 0;
+}
+
+.intro-text {
+    text-align: center;
+    padding: 2em;
+    margin-top: 1em;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #222;
+}
+
+.artists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.1em;
+}
+
+.artist-row {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    align-items: center;
+    opacity: 0;
+    transform: translateY(2em);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    scroll-margin-top: 2em;
+    box-sizing: border-box;
+}
+
+
+.artist-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.artist-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.artist-img-container {
+    flex: 0 0 250px; 
+    height: 250px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.artist-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.artist-row:hover .artist-img-container img {
+    transform: scale(1.05); 
+}
+
+.artist-info {
+    flex: 1; 
+    padding: 2em;
+    text-align: left;
+}
+
+.artist-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 1.8em;
+    color: #222;
+}
+
+.artist-category {
+    display: inline-block;
+    background-color: #eef9ff;
+    color: #11b8ff;
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.artist-info p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+
+.artist-category.malarstwo {
+    color: rgb(187, 0, 0);
+    background-color: #fdeaea;
+}
+
+.artist-category.rzezba {
+    color: rgb(23, 155, 0);
+    background-color: #eafaf1;
+}
+
+.artist-category.fotografia {
+    color: rgb(185, 3, 149);
+    background-color: #fce4ec;
+}
+
+.artist-category.m_r {
+    color: rgb(100, 3, 130);
+    background-color: #fce4ec;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e74c3c !important; 
+    background-color: #fdedec;
+}
+
+.artist-row.visible.m:focus-visible {
+    outline: 4px solid rgb(187, 0, 0);
+    outline-offset: 0;
+}
+.artist-row.visible.m_r:focus-visible {
+    outline: 4px solid rgb(100, 3, 130);
+    outline-offset: 0;
+}
+.artist-row.visible.r:focus-visible {
+    outline: 4px solid rgb(23, 155, 0);
+    outline-offset: 0;
+}
+.artist-row.visible.f:focus-visible {
+    outline: 4px solid rgb(185, 3, 149);
+    outline-offset: 0;
+}
+
+
+.artist-row:nth-child(even) {
+    transition-delay: 0.1s;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid #11b8ff;
+    outline-offset: 3px;
+    border-radius: 2px;
+    z-index: 1000;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: none;
+    border-color: #11b8ff;
+    box-shadow: 0 0 0 4px rgba(17, 184, 255, 0.2);
+}
+
+.gallery:focus-visible {
+    outline: 4px solid #11b8ff;
+    outline-offset: -4px;
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+.social-btn:focus-visible
+{
+    outline: 3px solid #333;
+    outline-offset: 2px;
+}
+
+nav ul li a:focus-visible {
+    background-color: rgba(17, 184, 255, 0.1);
+    outline: 2px solid #11b8ff;
+    outline-offset: 0;
+    border-radius: 4px;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e74c3c !important;
+    background-color: #fff5f5;
+}	
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 0.3em;
+    font-weight: 500;
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+
+/* --- Style dla podstrony Wydarzenia --- */
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 2em 0;
+    width: 100%;
+}
+
+#Rodzaje_sztuki, #Types_of_art
+{
+    scroll-margin-top: -32px;
+}
+
+.type#Malarstwo, .type#Painting, .type#Rzeźba, .type#Sculpture, .type#Fotografia, .type#Photography
+{
+    scroll-margin-top: 0;
+}
+
+.gallery-article
+{
+    scroll-margin-top: -2em;
+}
+
+section#Malarstwo, section#Painting, section#Rzeźba, section#Sculpture, section#Fotografia, section#Photography
+{
+    scroll-margin-top: -2em;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: row;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 80vw;
+    max-width: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.event-card:focus-visible
+{
+    outline: solid 4px #11b8ff;
+    outline-offset: 0px;
+}
+
+.event-date {
+    background-color: #222;
+    color: #11b8ff;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    text-align: center;
+}
+
+.event-date span.day {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date span.month {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.event-date span.year {
+    font-size: 0.9em;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.event-details {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.event-details h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.6em;
+    color: #000;
+}
+
+.event-details p {
+    margin: 0.5em 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+.event-info-row {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #555;
+}
+
+
+#map-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 3em auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 5px solid #222;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.form-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 3em 0;
+    margin-top: 2em;
+}
+
+.form-section h2 {
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    gap: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color: #ccc;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #11b8ff;
+}
+
+.submit-btn {
+    margin-top: 1em;
+    padding: 15px;
+    background-color: #11b8ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #0da3e2;
+    transform: scale(1.02);
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid #11b8ff;
+    outline-offset: 5px;
+}
+
+
+
+.input-error {
+    border-color: #d32f2f !important;
+    background-color: #fbe9e7 !important;
+    outline: none;
+}
+
+
+.success-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    min-height: 200px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+
+.error-text {
+    color: #d32f2f;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+    min-height: 1em;
+}
+
+.lw
+{
+    font-size: 1.8em;
+}
+
+.lt
+{
+    font-size: 1.5em;
+}
+
+
+@media (min-width: 2200px)
+{
+    #Malarstwo h2, #Painting h2, #Rzeźba h2, #Sculpture h2, #Fotografia h2, #Photography h2
+    {
+        font-size: 2.5em;
+    }
+
+    #container
+    {
+        width: 210.15px;
+        height: 32px;
+        padding: 0.8em 0;
+        border-radius: 12px;
+    }
+
+    #search_div_lang
+    {
+        height: 32px;
+        padding: 0.8em;
+    }
+
+    #search_lang-btn
+    {
+        height: 32px;
+    }
+
+    #search_lang
+    {
+        height: 32px;
+    }
+
+    #lang-container
+    {
+        border-radius: 12px;
+        padding: 0.8em;
+    }
+
+    #lang
+    {
+        height: 32px;
+        font-size: 2em;
+    }
+
+    #lang-text
+    {
+        width: 2.4em;
+        font-size: 1.8em;
+    }
+
+    #lang-select-btn
+    {
+        height: 32px;
+    }
+
+    #lang-select
+    {
+        width: 25.6px;
+        height: 25.6px;
+    }
+
+    #lang-menu.visible
+    {
+        width: 100%;
+        padding-top: 12.8px;
+    }
+
+    #lang-menu p
+    {
+        margin-bottom: 12.8px;
+        font-size: 1.6em;
+    }
+
+    #menu-text
+    {
+        height: 24px;
+        width: 100%;
+        padding: 12.8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    #lang-shortcut
+    {
+        height: 24px;
+        font-size: 1.68em;
+        letter-spacing: 1.2px;
+        line-height: 24px;
+    }
+
+    #flag
+    {
+        margin-right: 16px;
+    }
+
+    #search_text
+    {
+        height: 32px;
+        padding: 21px 0;
+        border-bottom: 8.5px solid #222222;
+    }
+
+    #tr
+    {
+        left: 89.5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    #search_close_btn
+    {
+        width: 32px;
+        height: 32px;
+        margin: 0 42px;
+    }
+
+    #search_icon, #search_close
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+    #search
+    {
+        height: 32px;
+        padding: 21px 0;
+        font-size: 1.4em;
+    }
+
+    #search_results
+    {
+        top: 254px !important;
+    }
+
+    #results
+    {
+        padding: 59px;
+        font-size: 29px;
+        line-height: 29px;
+    }
+
+    #inner_search_close_btn
+    {
+        width: 24px;
+        height: 24px;
+        top: 1.6em;
+        right: 1.6em;
+    }
+
+    #inner_search_close
+    {
+        width: 24px;
+        height: 24px;
+    }
+
+    #up img
+    {
+        height: 2em;
+    }
+}
+
+@media (min-width: 1900px)
+{
+    .slider-buttons
+    {
+        gap: 1.2em;
+    }
+
+    .prev, .next
+    {
+        height: 4.5em;
+    }
+
+    #pierwszy, #drugi, #trzeci
+    {
+        height: 0.75em;
+        width: 6.15em;
+    }
+}
+
+@media (min-width: 1600px)
+{
+    main h2
+    {
+        font-size: 3em;
+    }
+
+    .lt
+    {
+        font-size: 1.6em;
+    }
+
+    .lw
+    {
+        font-size: 2.2em;
+    }
+
+    .success-message-container h3
+    {
+        font-size: 1.7em;
+    }
+
+    .intro-text h2
+    {
+        font-size: 3em;
+    }
+
+    .artist-info p
+    {
+        font-size: 20px;
+    }
+
+    .event-details p
+    {
+        font-size: 20px;
+    }
+
+    .success-message-container h2
+    {
+        font-size: 1.7em;
+    }
+
+    .success-message-container p
+    {
+        font-size: 22px;
+    }
+
+    footer p
+    {
+        font-size: 1vw;
+    }
+
+    #spis
+    {
+        margin-bottom: 4em;
+    }
+
+    #spis .box
+    {
+        font-size: 1.2em;
+    }
+
+    .logo
+    {
+        height: 9em;
+    }
+
+    .title
+    {
+        font-size: 3em;
+    }
+    
+    .main_nav ul
+    {
+        font-size: 1.5em;
+    }
+
+    .main_nav a::after
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #11b8ff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    main h1
+    {
+        font-size: 3em;
+    }
+
+    main p
+    {
+        font-size: 1.7em;
+    }
+
+    .types h2
+    {
+        font-size: 2.7em;
+    }
+
+    .slider
+    {
+        height: 40vh;
+    }
+
+    .slides
+    {
+        height: 100%;
+    }
+
+    .slides img
+    {
+        height: 100%;
+    }
+
+    #search_text
+    {
+        top: 172px;
+    }
+
+    #search_results
+    {
+        top: 234.4px;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    header
+    {
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        top: 0;
+        padding-bottom: 0;
+    }
+
+    .main_nav
+    {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .logo-container
+    {
+        position: static;
+        transform: none;
+    }
+
+    .title-container
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title
+    {
+        padding: 0;
+        padding-bottom: 14px;
+    }
+
+    .content
+    {
+        flex-direction: column;
+    }
+
+    .type img
+    {
+        width: 13em;
+    }
+
+    .logo-container
+    {
+        margin-top: 0.8em;
+    }
+
+    #container
+    {
+        top: 0;
+        right: 0;
+        transform: translateY(0%);
+        border-radius: 0;
+    }
+
+    #search_text
+    {
+        top: 218.8px;
+    }
+
+    #search_results
+    {
+        top: 281.2px;
+    }
+
+    #lang-menu
+    {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 770px)
+{
+    #spis
+    {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .box
+    {
+        margin-bottom: 6px;
+        border: none;
+        margin: 0;
+    }
+
+    #spis ol
+    {
+        padding-left: 2.2em;
+        padding-right: 1em;
+    }
+
+    .box ol li a
+    {
+        line-height: 1.5;
+    }
+
+    #b1 h3
+    {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #b3 h3
+    {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 700px)
+{
+    header
+    {
+        position: relative;
+        top: 0;
+    }
+
+    .main_nav ul
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #222222;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        display: none;
+        margin: 0;
+    }
+
+    .main_nav ul.active
+    {
+        display: flex;
+        animation: slideDown 0.4s ease forwards;
+    }
+
+    .title-container
+    {
+        padding-bottom: 1em;
+    }
+
+    .burger
+    {
+        display: flex;
+    }
+
+    .main_nav ul li a
+    {
+        font-size: 1.5em;
+        padding: 16px;
+    }
+
+    .type.show:nth-child(1)
+    {
+        animation: slideInLeft 1s ease-out forwards;
+    }
+    .type.show:nth-child(2)
+    {
+        animation: slideInRight 1s ease-out forwards;
+    }
+    .type.show:nth-child(3)
+    {
+        animation: slideInUp 1s ease-out forwards;
+    }
+    #lightbox-img
+    {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    #search_text
+    {
+        top: 221.2px;
+    }
+
+    #search_results
+    {
+        top: 283.6px;
+    }
+}
+
+@media (max-width: 490px)
+{
+    .nav
+    {
+        margin: 71% 10% 0 10%;
+        padding: 5% 9%;
+    }
+
+    #container
+    {
+        width: fit-content;
+    }
+
+    #lang-container
+    {
+        border-radius: 0;
+    }
+
+    #search_div_head
+    {
+        display: flex;
+    }
+
+    #search_lang
+    {
+        display: none;
+    }
+
+    #search_div_lang
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 435px)
+{
+    .nav
+    {
+        margin: 73% 10% 0 10%;
+        padding: 5% 9%;
+    }
+}
+
+
+
+@keyframes slideDown
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft
+{
+  from
+  {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight
+{
+  from
+  {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0; transform: scale(0.95);
+  }
+  to
+  {
+    opacity: 1; transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+    .artist-row {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .artist-img-container {
+        flex: none;
+        width: 100%;
+        height: 300px; 
+    }
+
+    .artist-info {
+        text-align: center; 
+        padding: 1.5em;
+    }
+}
+
+/* Dostosowanie do mniejszych ekranów */
+@media (max-width: 700px) {
+    .event-card {
+        flex-direction: column;
+        width: 90vw;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        gap: 10px;
+        padding: 1em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .event-date span.year {
+        margin-top: 0;
+    }
+
+    .event-info-row {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

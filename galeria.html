@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="alternate" href="/galeria.html" hreflang="pl">
+    <link rel="alternate" href="/en/gallery.html" hreflang="en">
+</head>
+
+<body>
+    <header id="header">
+
+        <div id="search_div_head">
+            <button id="search_head-btn" title="Szukaj" aria-label="Szukaj">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_head" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+            </button>
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" title="Strona główna">
+              <img src="img/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+
+        <div class="title-container">
+            <h1 class="title"><a href="index.html" title="Strona główna">Sztuka w Obiektywie</a></h1>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="index.html" title="Strona główna">Strona główna</a></li>
+                    <li><a href="artysci.html" title="Artyści">Artyści</a></li>
+                    <li><a href="galeria.html" title="Galeria" class="active">Galeria</a></li>
+                    <li><a href="wydarzenia.html" title="Wydarzenia">Wydarzenia</a></li>
+                    <li><a href="kontakt.html" title="Kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="container">
+
+          <div id="search_div_lang">
+            <button id="search_lang-btn" title="Szukaj" aria-label="Szukaj">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+                preserveAspectRatio="xMidYMid meet" id="search_lang" aria-hidden="true">
+                <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg> 
+            </button>
+          </div>
+
+            <div id="lang-container">
+                <img src="img/lang.png" alt="lang" id="lang">
+                <div id="lang-text">PL</div>
+                    <button id="lang-select-btn" title="Zmień język" aria-label="Zmień język">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.000000 172.000000"
+                        preserveAspectRatio="xMidYMid meet" id="lang-select" aria-hidden="true">
+                        <g transform="translate(0.000000,172.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                        <path d="M125 1694 c-74 -38 -124 -115 -125 -190 0 -88 12 -101 712 -800 420 -418 676 -667 700 -677 46 -22 130 -22 176 0 24 10 280 259 700 677 700 699 712 712 712 800 -1 77 -65 169 -137 197 -38 14 -121 11 -161 -8 -24 -10 -252 -230 -619 -597 l-583 -581 -582 581 c-368 367 -596 587 -620 597 -45 21 -134 22 -173 1z"/></g></svg> 
+                    </button>
+                    
+                <div id="lang-menu">
+                    <p id="menu-title">Język</p>
+                    <div id="menu-text" title="English">
+                        <img src="img/en.png" alt="" aria-hidden="true" id="flag">
+                        <span id="lang-shortcut">EN</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <form id="search_text" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.000000 265.000000"
+          preserveAspectRatio="xMidYMid meet" id="search_icon" aria-hidden="true">
+          <g transform="translate(0.000000,265.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+          <path d="M873 2626 c-534 -102 -902 -583 -852 -1116 26 -278 163 -538 376 -710 192 -155 407 -231 658 -231 194 0 368 47 527 142 l82 50 371 -370 c399 -399 392 -393 480 -377 40 8 99 55 121 97 18 36 18 112 0 147 -8 15 -177 189 -374 386 l-360 359 23 37 c254 402 210 915 -110 1267 -121 134 -310 248 -495 298 -119 33 -333 43 -447 21z m392 -316 c241 -76 420 -254 495 -495 33 -107 38 -265 11 -378 -53 -221 -193 -397 -395 -497 -108 -53 -197 -73 -326 -72 -207 0 -366 67 -515 217 -150 149 -217 308 -218 515 0 128 19 215 73 325 97 198 273 341 487 395 106 27 286 22 388 -10z"/></g></svg>
+          
+          <input type="text" id="search" aria-label="Szukaj" placeholder="Szukaj" maxlength="60" tabindex="0">
+
+          <button id="search_close_btn" type="button" title="Zamknij" aria-label="Zamknij">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+              preserveAspectRatio="xMidYMid meet" id="search_close" aria-hidden="true">
+              <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+              <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+          
+          <div id="tr"></div>
+        </form>
+
+        <div id="search_results">
+          
+            <div id="results"></div>
+          
+            <button id="inner_search_close_btn" title="Zamknij" aria-label="Zamknij">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.000000 117.000000"
+                preserveAspectRatio="xMidYMid meet" id="inner_search_close" aria-hidden="true">
+                <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M37 1132 l-37 -37 255 -255 255 -255 -255 -255 -255 -256 38 -37 37 -37 255 255 255 255 255 -255 256 -255 37 38 37 37 -255 255 -255 255 255 255 255 256 -38 37 -37 37 -255 -255 -255 -255 -255 255 -256 255 -37 -38z"/></g></svg>
+          </button>
+        </div>
+
+    </header>
+
+    <main class="galeria">
+
+        <h2>Galeria dzieł sztuki</h2>
+        <p>Oto galeria dzieł sztuki z podziałem na dzieła malarskie, fotograficzne i rzeźby.</p>
+
+    </main>
+
+    <nav id="spis">
+        <div class="box" id="b1">
+            <h3><a href="#Malarstwo">Malarstwo</a></h3>
+            <ol>
+                <li><a href="#Mona_Lisa">Mona Lisa</a></li>
+                <li><a href="#Krzyk">Krzyk</a></li>
+                <li><a href="#Stworzenie_Adama">Stworzenie Adama</a></li>
+                <li><a href="#Gwiaździsta_noc">Gwiaździsta noc</a></li>
+                <li><a href="#Gracze_w_karty">Gracze w karty</a></li>
+                <li><a href="#Dziewczyna_z_perłą">Dziewczyna z perłą</a></li>
+                <li><a href="#Wędrowiec_nad_morzem_mgły">Wędrowiec nad morzem mgły</a></li>
+                <li><a href="#Ostatnia_Wieczerza">Ostatnia Wieczerza</a></li>
+                <li><a href="#Młody_zając">Młody zając</a></li>
+            </ol>
+        </div>
+        <div class="box" id="b2">
+            <h3><a href="#Rzeźba">Rzeźba</a></h3>
+            <ol>
+                <li><a href="#Popiersie_Nefertiti">Popiersie Nefertiti</a></li>
+                <li><a href="#Pietà_Watykańska">Pietà Watykańska</a></li>
+                <li><a href="#Nike_z_Samotraki">Nike z Samotraki</a></li>
+                <li><a href="#Pomnik_Stefana_Starzyńskiego">Pomnik Stefana Starzyńskiego</a></li>
+                <li><a href="#Odpoczywający_pięściarz">Odpoczywający pięściarz</a></li>
+                <li><a href="#Ugolino_i_jego_synowie">Ugolino i jego synowie</a></li>
+                <li><a href="#Statua_Wolności">Statua Wolności</a></li>
+                <li><a href="#Psyche_i_Kupidyn">Psyche i Kupidyn</a></li>
+                <li><a href="#Moai">Moai</a></li>
+            </ol>
+        </div>
+        <div class="box" id="b3">
+        <h3><a href="#Fotografia">Fotografia</a></h3>
+            <ol>
+                <li><a href="#Samuel_Morse">Samuel Morse</a></li>
+                <li><a href="#Nesjaja_Hatali_–_Navaho">Nesjaja Hatali – Navaho</a></li>
+                <li><a href="#Samuraje_z_klanu_Satsuma">Samuraje z klanu Satsuma</a></li>
+                <li><a href="#Mieszkanie_za_pięć_centów">Mieszkanie za pięć centów</a></li>
+                <li><a href="#Gazeciarze_palący_papierosy">Gazeciarze palący papierosy</a></li>
+                <li><a href="#Martwa_natura">Martwa natura</a></li>
+                <li><a href="#Wodospad_Welon_Ślubny">Wodospad Welon Ślubny</a></li>
+                <li><a href="#Łachmaniarz">Łachmaniarz</a></li>
+                <li><a href="#Luksor">Luksor</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <section id="Malarstwo" class="search-item">
+        <h2>Malarstwo</h2>
+
+        <article id="Mona_Lisa" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Leonardo_da_Vinci" class="artist-link">Leonardo da Vinci</a> – „Mona Lisa”
+            </h3>
+            <img src="img/o1.webp" alt="Mona Lisa" title="Mona Lisa" class="gallery" tabindex="0">
+            <p class="opis">„Mona Lisa” (ok. 1503-1506) to najsłynniejszy obraz Leonarda da Vinci,
+            uznawany za jedno z największych arcydzieł renesansu. Przedstawia tajemniczo uśmiechniętą kobietę,
+            siedzącą na tle delikatnego pejzażu. Obraz zachwyca niezwykłym realizmem, subtelnym modelunkiem
+            światłocieniowym (sfumato) oraz spokojną, harmonijną kompozycją. Portretowana kobieta – prawdopodobnie
+            Lisa Gherardini, żona florenckiego kupca – stała się symbolem kobiecej tajemnicy i piękna.
+            Obecnie dzieło znajduje się w Luwrze w Paryżu, gdzie przyciąga miliony zwiedzających z całego świata.</p>
+        </article>
+
+        <article id="Krzyk" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Edvard_Munch" class="artist-link">Edvard Munch</a> – „Krzyk”
+            </h3>
+            <img src="img/o2.jpg" alt="Krzyk" title="Krzyk" class="gallery" tabindex="0">
+            <p class="opis">„Krzyk” (1893) to najsłynniejsze dzieło norweskiego malarza Edvarda Muncha,
+            uznawane za symbol egzystencjalnego lęku i niepokoju człowieka. Obraz przedstawia postać
+            o zdeformowanej twarzy, stojącą na moście i krzyczącą w rozpaczy, podczas gdy niebo płonie dramatycznymi,
+            falistymi barwami. Ekspresyjne linie i intensywne kolory oddają silne emocje – strach,
+            samotność i trwogę wobec świata. „Krzyk” stał się jednym z najbardziej rozpoznawalnych symboli sztuki
+            nowoczesnej i ikoną ludzkiego niepokoju.</p>
+        </article>
+
+        <article id="Stworzenie_Adama" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Michał_Anioł" class="artist-link">Michał Anioł</a> – „Stworzenie Adama”
+            </h3>
+            <img src="img/o3.jpg" alt="Stworzenie Adama" title="Stworzenie Adama" class="gallery" tabindex="0">
+            <p class="opis">„Stworzenie Adama” (ok. 1511) to jedno z najsłynniejszych dzieł Michała Anioła Buonarrotiego,
+            stanowiące fragment fresków na sklepieniu Kaplicy Sykstyńskiej w Watykanie. Przedstawia moment, w którym
+            Bóg zbliża się do Adama, by tchnąć w niego życie – ich niemal stykające się dłonie symbolizują połączenie
+            boskości z człowieczeństwem. Kompozycja zachwyca dynamiką ruchu, doskonałym przedstawieniem ludzkiego
+            ciała i głębokim ładunkiem duchowym. „Stworzenie Adama” jest jednym z najbardziej rozpoznawalnych symboli
+            renesansu i geniuszu artysty.</p>
+        </article>
+
+        <article id="Gwiaździsta_noc" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Vincent_van_Gogh" class="artist-link">Vincent van Gogh</a> – „Gwiaździsta noc”
+            </h3>
+            <img src="img/o4.jpg" alt="Gwiaździsta noc" title="Gwiaździsta noc" class="gallery" tabindex="0">
+            <p class="opis">„Gwiaździsta noc” (1889) to jedno z najbardziej znanych dzieł Vincenta van Gogha,
+            namalowane podczas jego pobytu w szpitalu psychiatrycznym w Saint-Rémy-de-Provence. Obraz ukazuje
+            nocne niebo pełne wirujących gwiazd i księżyc nad spokojnym miasteczkiem, widzianym z okna artysty.
+            Dynamiczne pociągnięcia pędzla i intensywne kontrasty barw oddają emocjonalny niepokój, ale też zachwyt
+            nad potęgą natury. „Gwiaździsta noc” stała się symbolem ekspresyjnego stylu van Gogha i jego wyjątkowego
+            sposobu postrzegania świata.</p>
+        </article>
+
+        <article id="Gracze_w_karty" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Paul_Cézanne" class="artist-link">Paul Cézanne</a> – „Gracze w karty”
+            </h3>
+            <img src="img/o6.jpg" alt="Gracze w karty" title="Gracze w karty" class="gallery" tabindex="0">
+            <p class="opis">„Gracze w karty” (1890-1895) to jedno z najsłynniejszych dzieł Paula Cézanne'a,
+            przedstawiające dwóch mężczyzn pogrążonych w spokojnej grze karcianej. Artysta stworzył kilka
+            wersji tego motywu, ukazując codzienną scenę w surowy, zrównoważony sposób. Uproszczone formy,
+            wyważona kompozycja i ciepłe barwy podkreślają skupienie i spokój chwili. Obraz jest doskonałym
+            przykładem stylu Cézanne'a, który łączył realizm z nowatorskim podejściem do kształtu i koloru,
+            zapowiadając rozwój sztuki nowoczesnej i kubizmu.</p>
+        </article>
+
+        <article id="Dziewczyna_z_perłą" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Johannes_Vermeer" class="artist-link">Johannes Vermeer</a> – „Dziewczyna z perłą”
+            </h3>
+            <img src="img/o7.jpg" alt="Dziewczyna z Perłą" title="Dziewczyna z Perłą" class="gallery" tabindex="0">
+            <p class="opis">„Dziewczyna z perłą” (ok. 1665) to najsłynniejsze dzieło Johannesa Vermeera, często
+            nazywane „Mona Lisą Północy”. Obraz przedstawia młodą dziewczynę ubraną w egzotyczny turban,
+            z dużą, lśniącą perłą w uchu. Subtelne światło, miękkie cienie i delikatny wyraz twarzy tworzą
+            atmosferę ciszy i tajemnicy. Vermeer z niezwykłą precyzją uchwycił moment, w którym dziewczyna
+            odwraca głowę, jakby właśnie miała coś powiedzieć. Dzieło zachwyca prostotą, elegancją i niezwykłą
+            grą światła, stając się jednym z symboli malarstwa holenderskiego.</p>
+        </article>
+
+        <article id="Wędrowiec_nad_morzem_mgły" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Caspar_David_Friedrich" class="artist-link">Caspar David Friedrich</a>
+                – „Wędrowiec nad morzem mgły”
+            </h3>
+            <img src="img/o8.jpeg" alt="Wędrowiec nad morzem mgły" title="Wędrowiec nad morzem mgły" class="gallery"
+            tabindex="0">
+            <p class="opis">„Wędrowiec nad morzem mgły” (1818) to najsłynniejszy obraz Caspara Davida Friedricha,
+            będący symbolem romantyzmu w sztuce. Przedstawia samotnego mężczyznę stojącego na skalnym szczycie,
+            spoglądającego na rozciągający się poniżej, spowity mgłą krajobraz. Postać odwrócona plecami do widza
+            symbolizuje człowieka wobec potęgi i tajemnicy natury. Obraz łączy melancholię, zachwyt i refleksję nad
+            miejscem człowieka w świecie, ukazując naturę jako przestrzeń duchowego doświadczenia i nieskończoności.</p>
+        </article>
+
+        <article id="Ostatnia_Wieczerza" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Leonardo_da_Vinci" class="artist-link">Leonardo da Vinci</a> – „Ostatnia Wieczerza”
+            </h3>
+            <img src="img/o9.jpg" alt="Ostatnia Wieczerza" title="Ostatnia Wieczerza" class="gallery" tabindex="0">
+            <p class="opis">„Ostatnia Wieczerza” (1495-1498) to monumentalne dzieło Leonarda da Vinci,
+            namalowane na ścianie refektarza klasztoru Santa Maria delle Grazie w Mediolanie. Obraz przedstawia
+            moment, w którym Jezus oznajmia uczniom, że jeden z nich go zdradzi, co wywołuje wśród apostołów gwałtowną
+            reakcję emocji. Leonardo mistrzowsko ukazał ludzkie uczucia, gesty i spojrzenia, a także zastosował
+            perspektywę, która kieruje wzrok widza ku postaci Chrystusa w centrum. Dzieło łączy duchową głębię z
+            doskonałą kompozycją i jest jednym z najważniejszych symboli sztuki renesansu.</p>
+        </article>
+
+        <article id="Młody_zając" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Albrecht_Dürer" class="artist-link">Albrecht Dürer</a> – „Młody zając”
+            </h3>
+            <img src="img/o10.jpg" alt="Młody zając" title="Młody zając" class="gallery" tabindex="0">
+            <p class="opis">„Młody zając” (1502) to słynna akwarela Albrechta Dürera, będąca jednym z najdoskonalszych
+            przykładów jego mistrzostwa w obserwacji natury. Artysta z niezwykłą precyzją oddał każdy detal
+            zwierzęcia – miękkie futro, błysk w oku i subtelne światło padające na ciało. Dzieło zachwyca realizmem
+            i delikatnością wykonania, ukazując jednocześnie głęboki szacunek Dürera dla przyrody. „Młody zając”
+            stał się ikoną sztuki renesansowej i symbolem doskonałości technicznej w malarstwie i rysunku.</p>
+        </article>
+    </section>
+
+    <section id="Rzeźba" class="search-item">
+        <h2>Rzeźba</h2>
+
+        <article id="Popiersie_Nefertiti" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Totmes" class="artist-link">Totmes</a> – „Popiersie Nefertiti”
+            </h3>
+            <img src="img/nef.jpg" alt="Popiersie Nefertiti" title="Popiersie Nefertiti" class="gallery" tabindex="0">
+            <p class="opis">„Popiersie Nefertiti” (ok. 1345 p.n.e.) to jedno z najsłynniejszych dzieł sztuki starożytnego
+            Egiptu, przypisywane rzeźbiarzowi Totmesowi. Przedstawia królową Nefertiti, żonę faraona Echnatona, znaną
+            z niezwykłej urody i elegancji. Rzeźba zachwyca idealnymi proporcjami, subtelnym modelunkiem twarzy
+            i delikatnym uśmiechem królowej. Charakterystyczna wysoka korona oraz zachowane fragmenty barwnych
+            zdobień podkreślają majestat i dostojność postaci. Dzieło stało się symbolem piękna, harmonii i kunsztu
+            starożytnej sztuki egipskiej.</p>
+        </article>
+
+        <article id="Pietà_Watykańska" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Michał_Anioł" class="artist-link">Michał Anioł</a> – „Pietà Watykańska”
+            </h3>
+            <img src="img/r4.jpg" alt="Pietà Watykańska" title="Pietà Watykańska" class="gallery" tabindex="0">
+            <p class="opis">Pieta Watykańska to jedno z najsłynniejszych dzieł rzeźbiarskich w historii świata,
+                wykonane przez Michała Anioła w latach 1498–1499. Rzeźba, znajdująca się obecnie w Bazylice św. Piotra
+                w Watykanie, przedstawia motyw Matki Boskiej opłakującej martwe ciało Jezusa Chrystusa tuż po
+                zdjęciu z krzyża. Jest to jedyna rzeźba, na której Michał Anioł umieścił swoją sygnaturę, widoczną
+                na pasie biegnącym przez pierś Marii.</p>
+        </article>
+
+        <article id="Nike_z_Samotraki" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Pytokritos" class="artist-link">Pytokritos</a> – „Nike z Samotraki”
+            </h3>
+            <img src="img/r5.jpg" alt="Nike z Samotraki" title="Nike z Samotraki" class="gallery" tabindex="0">
+            <p class="opis">Nike z Samotraki (ok. 190 p.n.e.) to hellenistyczna rzeźba przedstawiająca grecką boginię
+            zwycięstwa, Nike. Ukazana jest w dynamicznym ruchu, jakby właśnie wylądowała na dziobie okrętu, a silny
+            wiatr rozwiewa jej szaty, podkreślając siłę i dramatyzm sceny. Mimo braku głowy i ramion dzieło zachwyca
+            mistrzowskim oddaniem ruchu oraz ekspresji. Obecnie rzeźba znajduje się w Luwrze w Paryżu i uważana jest za
+            jedno z najwybitniejszych osiągnięć sztuki hellenistycznej.</p>
+        </article>
+
+        <article id="Pomnik_Stefana_Starzyńskiego" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Ludwika_Nitschowa" class="artist-link">Ludwika Nitschowa</a> – „Pomnik
+                Stefana Starzyńskiego”
+            </h3>
+            <img src="img/pss.jpg" alt="Pomnik Stefana Starzyńskiego" title="Pomnik Stefana Starzyńskiego"
+            class="gallery" tabindex="0">
+            <p class="opis">Pomnik Stefana Starzyńskiego autorstwa Ludwiki Nitschowej przedstawia prezydenta Warszawy jako
+                symbol odwagi, odpowiedzialności i poświęcenia dla miasta. Rzeźba ukazuje Starzyńskiego w postawie
+                skupionej i godnej, podkreślając jego rolę jako przywódcy, który pozostał z mieszkańcami Warszawy
+                podczas oblężenia w 1939 roku. Pomnik upamiętnia jego patriotyzm oraz niezłomną postawę w obliczu
+                zagrożenia.</p>
+        </article>
+
+        <article id="Odpoczywający_pięściarz" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Apollonios_z_Aten" class="artist-link">Apollonios z Aten</a>
+                – „Odpoczywający pięściarz”
+            </h3>
+            <img src="img/op.jpg" alt="Odpoczywający pięściarz" title="Odpoczywający pięściarz" class="gallery" tabindex="0">
+            <p class="opis">„Odpoczywający pięściarz” to antyczna rzeźba z okresu hellenistycznego, przedstawiająca
+                zmęczonegosportowca po walce. Realistycznie ukazane rany, opuchnięta twarz i napięte ciało podkreślają
+                trud,ból ikruchość ludzkiej siły. Rzeźba wyróżnia się niezwykłym realizmem i emocjonalnością,
+                ukazując bohatera nie w chwili triumfu, lecz w momencie wyczerpania i refleksji.</p>
+        </article>
+
+        <article id="Ugolino_i_jego_synowie" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Jean-Baptiste_Carpeaux" class="artist-link">Jean-Baptiste Carpeaux</a>
+                – „Ugolino i jego synowie”
+            </h3>
+            <img src="img/uo.jpg" alt="Ugolino i jego synowie" title="Ugolino i jego synowie" class="gallery" tabindex="0">
+            <p class="opis">„Ugolino i jego synowie” to dramatyczna rzeźba autorstwa Jeana-Baptiste'a Carpeaux,
+                inspirowana Boską komedią Dantego. Przedstawia hrabiego Ugolina w chwili skrajnego cierpienia, otoczonego
+                przez umierających z głodu synów. Ekspresyjna forma, napięte mięśnie i gesty postaci podkreślają rozpacz,
+                bezsilność i tragiczny wybór, czyniąc rzeźbę jednym z najmocniejszych przykładów emocjonalnego
+                realizmu XIX wieku.</p>
+        </article>
+        
+        <article id="Statua_Wolności" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Frédéric-Auguste_Bartholdi" class="artist-link">Frédéric-Auguste Bartholdi</a>
+                – „Statua Wolności”
+            </h3>
+            <img src="img/sw.jpg" alt="Statua Wolności" title="Statua Wolności" class="gallery" tabindex="0">
+            <p class="opis">Statua Wolności to monumentalna rzeźba w Nowym Jorku, zaprojektowana przez Frédérica
+                Augusta Bartholdiego i podarowana przez Francję w 1886 roku. Przedstawia kobietę trzymającą
+                pochodnię i tablicę z datą Deklaracji Niepodległości USA, symbolizując wolność, demokrację
+                i nadzieję. Dzięki ogromnym rozmiarom i wyrazistej symbolice stała się jednym z najbardziej
+                rozpoznawalnych symboli świata.</p>
+        </article>
+
+        <article id="Psyche_i_Kupidyn" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Antonio_Canova" class="artist-link">Antonio Canova</a> – „Psyche i Kupidyn”
+            </h3>
+            <img src="img/pk.jpg" alt="Psyche i Kupidyn" title="Psyche i Kupidyn" class="gallery" tabindex="0">
+            <p class="opis">„Psyche i Kupidyn” to klasyczna rzeźba autorstwa Antonio Canovy, przedstawiająca
+                moment miłosnego uniesienia między Psyche a Kupidynem. Delikatne, harmonijne ciała i subtelne
+                gesty ukazują uczucie, zaufanie i piękno idealizowanej postaci. Rzeźba jest jednym
+                z najważniejszych przykładów neoklasycyzmu, łącząc perfekcję anatomiczną z poetycką
+                emocjonalnością.</p>
+        </article>
+
+        <article id="Moai" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                Rapa Nui – „Moai”
+            </h3>
+            <img src="img/mo.jpg" alt="Moai" title="Moai" class="gallery" tabindex="0">
+            <p class="opis">Moai to ponad 900 posągów wykutych przez lud Rapa Nui między 1250 a 1500 rokiem. Choć
+                najbardziej kojarzymy ich potężne głowy, większość z nich posiada również tułowia ukryte pod
+                ziemią. Średnia wysokość posągu to około 4 metry, a ich transport i ustawienie do dziś pozostają
+                przedmiotem badań i podziwu inżynieryjnego.</p>
+        </article>
+    </section>
+
+    <section id="Fotografia" class="search-item">
+        <h2>Fotografia</h2>
+
+        <article id="Samuel_Morse" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Mathew_B._Brady" class="artist-link">Mathew B. Brady</a> – „Samuel Morse”
+            </h3>
+            <img src="img/b1.jpg" alt="Samuel Morse" title="Samuel Morse" class="gallery" tabindex="0">
+            <p class="opis">Ta fotografia autorstwa Mathewa B. Brady'ego przedstawia amerykańskiego wynalazcę i artystę,
+                twórcę telegrafu oraz alfabetu Morse'a. Portret utrzymany jest w charakterystycznej dla XIX-wiecznej
+                fotografii, formalnej stylistyce studyjnej, podkreślającej powagę i intelektualny autorytet modela.
+                Zdjęcie stanowi cenny dokument epoki wczesnej nowoczesności i historii komunikacji.</p>
+        </article>
+
+        <article id="Nesjaja_Hatali_–_Navaho" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Edward_S._Curtis" class="artist-link">Edward S. Curtis</a> – „Nesjaja Hatali
+                – Navaho”
+            </h3>
+            <img src="img/nm.jpg" alt="Nesjaja Hatali – Navaho" title="Nesjaja Hatali – Navaho" class="gallery"
+            tabindex="0">
+            <p class="opis">„Nesjaja Hatali – Navaho” to historyczna fotografia wykonana około 1904 roku przez
+                Edwarda S. Curtisa, przedstawiająca Nesjaja Hatali – znanego medyka i członka plemienia Navajo
+                (Diné). Obraz jest portretem starszego mężczyzny w tradycyjnym ubiorze i biżuterii, ukazującym
+                ważną postać kultury i medycyny rdzennych Amerykanów z początku XX wieku. Fotografia pochodzi
+                z serii The North American Indian – obszernego projektu dokumentującego życie i zwyczaje ludów
+                rdzennych Ameryk.</p>
+        </article>
+
+        <article id="Samuraje_z_klanu_Satsuma" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Felice_Beato" class="artist-link">Felice Beato</a>
+                – „Samuraje z klanu Satsuma”
+            </h3>
+            <img src="img/sam.jpg" alt="Samuraje z klanu Satsuma" title="Samuraje z klanu Satsuma"
+            class="gallery" tabindex="0">
+            <p class="opis">„Samuraje z klanu Satsuma” to historyczna fotografia przedstawiająca członków
+                samurajskiego klanu Satsuma (Shimazu) wykonana około lat 60. XIX wieku (ok. 1867) przez fotografa
+                Felice Beato. Przedstawia grupę samurajów walczących w okresie wojny Boshin – konfliktu,
+                w którym Satsuma był kluczowym sojusznikiem sił dążących do obalenia siogunatu i przywrócenia
+                władzy cesarza w Japonii. Fotografia ukazuje ich tradycyjne stroje, broń i postawy, będąc jednym
+                z najwcześniejszych zachowanych zdjęć japońskich wojowników tej klasy w okresie przemian
+                społeczno-politycznych w Japonii.</p>
+        </article>
+
+        <article id="Mieszkanie_za_pięć_centów" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Jacob_Riis" class="artist-link">Jacob Riis</a> – „Mieszkanie za pięć centów”
+            </h3>
+            <img src="img/f3.jpg" alt="Mieszkanie za pięć centów" title="Mieszkanie za pięć centów"
+            class="gallery" tabindex="0">
+            <p class="opis">To czarno-biała fotografia wykonana przez Jacoba Riisa w 1889 roku w Nowym Jorku.
+                Przedstawia bardzo ciasne i przeludnione pomieszczenie w budynku czynszowym, gdzie ubodzy
+                mieszkańcy (często imigranci) płacili pięć centów za miejsce do spania na noc. Obraz ukazuje
+                realia życia najbiedniejszych warstw społeczeństwa w XIX-wiecznym mieście – fatalne warunki
+                sanitarne, brak przestrzeni i prywatności, a także trudną codzienność ludzi, którzy nie mogli
+                sobie pozwolić na lepsze mieszkanie. Riis publikował takie zdjęcia, by uświadomić opinii
+                publicznej dramatyzm sytuacji oraz przyczynić się do reformy warunków mieszkaniowych w slumsach.</p>
+        </article>
+
+        <article id="Gazeciarze_palący_papierosy" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Lewis_Hine" class="artist-link">Lewis Hine</a> – „Gazeciarze palący papierosy”
+            </h3>
+            <img src="img/pg.jpg" alt="Gazeciarze palący papierosy" title="Gazeciarze palący papierosy"
+            class="gallery" tabindex="0">
+            <p class="opis">To historyczna fotografia wykonana przez Lewisa Hinea, przedstawiająca
+                chłopców-gazeciarzy na ulicach St. Louis (Missouri, USA) w 1910 roku trzymających i palących
+                papierosy podczas przerwy w pracy. Fotografia ukazuje realia życia młodych pracowników ulicznych
+                w pierwszych dekadach XX w. – dzieci zarabiające na sprzedaży gazet często dorastały szybciej
+                niż ich rówieśnicy, a takie obrazy podkreślają trudne warunki pracy i codzienne nawyki związane
+                z kulturą uliczną tamtej epoki. Hine wykorzystywał swoje zdjęcia jako narzędzie do
+                dokumentowania pracy dzieci i wspierania reform przeciwko pracy dzieci w Stanach Zjednoczonych.</p>
+        </article>
+
+        <article id="Martwa_natura" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Adolphe_Braun" class="artist-link">Adolphe Braun</a> – „Martwa natura”
+            </h3>
+            <img src="img/mn.jpg" alt="Martwa natura" title="Martwa natura" class="gallery" tabindex="0">
+            <p class="opis">„Martwa natura” Adolphe'a Brauna to klasyczny przykład kompozycji
+                still life, w której artysta ukazuje nieruchome przedmioty w harmonijnym układzie. Fotografia
+                pochodzi z XIX wieku i charakteryzuje się dbałością o detale, światło i fakturę przedmiotów,
+                dzięki czemu zwykłe elementy codziennego życia stają się dziełem sztuki. Prace Brauna były
+                jednymi z pierwszych, które traktowały fotografię jako środek artystycznej ekspresji, nie
+                tylko dokumentu, i miały duży wpływ na rozwój fotograficznych martwych natur w Europie.</p>
+        </article>
+
+        <article id="Wodospad_Welon_Ślubny" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Carleton_Watkins" class="artist-link">Carleton Watkins</a> – „Wodospad Welon Ślubny”
+            </h3>
+            <img src="img/bv.jpg" alt="Wodospad Welon Ślubny" title="Wodospad Welon Ślubny" class="gallery" tabindex="0">
+            <p class="opis">„Wodospad Welon Ślubny” – fotografia autorstwa Carletona Watkinsa przedstawia malowniczy
+                wodospad w Kalifornii, którego opadająca woda przypomina delikatny welon panny młodej. Wykonana
+                w XIX wieku fotografia ukazuje zarówno monumentalną naturę, jak i precyzyjną kompozycję,
+                charakterystyczną dla twórczości Watkinsa, dokumentującego krajobrazy zachodnich Stanów Zjednoczonych
+                w okresie eksploracji Yosemite i okolic.</p>
+        </article>
+
+        <article id="Łachmaniarz" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Eugène_Atget" class="artist-link">Eugène Atget</a> – „Łachmaniarz”
+            </h3>
+            <img src="img/l.jpg" alt="Łachmaniarz" title="Łachmaniarz" class="gallery" tabindex="0">
+            <p class="opis">„Łachmaniarz” Eugène'a Atgeta przedstawia zbieracza złomu lub szmat w
+                Paryżu na początku XX wieku. Obraz ukazuje codzienne życie miejskich pracowników najniższej
+                klasy społecznej, ich pracę i warunki bytowe, utrwalone w charakterystycznym dla Atgeta surowym,
+                dokumentalnym stylu. Fotografia jest częścią serii Atgeta dokumentującego stary Paryż,
+                zanikające zawody i architekturę miasta, i stanowi ważny zapis społeczno-historyczny oraz
+                przykład wczesnej fotografii dokumentalnej.</p>
+        </article>
+
+        <article id="Luksor" class="gallery-article search-item">
+            <h3 class="gallery_artist">
+                <a href="artysci.html#Francis_Frith" class="artist-link">Francis Frith</a> – „Luksor”
+            </h3>
+            <img src="img/lux.jpg" alt="Luksor" title="Luksor" class="gallery" tabindex="0">
+            <p class="opis">Ta fotografia autorstwa Francisa Fritha to historyczny obraz przedstawiający miasto
+                Luksor w Egipcie, jego zabytki i starożytne ruiny, wykonany w połowie XIX wieku. Frith,
+                znany brytyjski fotograf podróżnik, uchwycił monumentalne kolumny, świątynie i krajobraz
+                Nilu, łącząc dokumentację archeologiczną z estetyką artystyczną. Fotografia jest przykładem
+                wczesnej fotografii podróżniczej i orientalnej, mającej na celu pokazanie Europie egzotycznych
+                miejsc i starożytnej kultury egipskiej.</p>
+        </article>
+    </section>
+
+
+    <div id="lightbox" role="dialog" aria-modal="true">
+        <button class="close" aria-label="Zamknij podgląd">✖</button>
+        <img class="lightbox-content" id="lightbox-img"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
+        <button class="nav lbprev" aria-label="Poprzedni obraz">&#10094;</button>
+        <button class="nav lbnext" aria-label="Następny obraz">&#10095;</button>
+    </div>
+
+    <button id="up" style="display: none;">
+        <img src="img/up.png" alt="" title="Do góry" aria-label="Do góry">
+    </button>
+
+
+    <footer style="margin-top: 0;">
+    <p>2025 © Tomasz Cuch, Aleksander Bzowski, Szymon Fidzina | Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>
