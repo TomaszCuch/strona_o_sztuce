@@ -281,13 +281,10 @@ document.addEventListener('keydown', (e) => {
 
 
 // Zmiana języka strony kliknięciem na flagę/skrót języka
-function change_lang()
-{
+function change_lang() {
   const url = new URL(window.location.href);
-  const pathname = url.pathname;
   const search = url.search || "";
-  // ignorujemy hash, żeby nie przewijało do starego elementu
-  const hash = ""; 
+  const hash = ""; // ignorujemy hash
 
   const plToEn = {
     "index.html": "index.html",
@@ -296,40 +293,57 @@ function change_lang()
     "wydarzenia.html": "events.html",
     "kontakt.html": "contact.html"
   };
-
   const enToPl = Object.fromEntries(
     Object.entries(plToEn).map(([k, v]) => [v, k])
   );
 
-  const elems = pathname.split("/");
+  const isLocal = url.protocol === "file:";
+  let pathname = url.pathname;
 
-  let fileIdx = elems.length - 1;
-  if (elems[fileIdx] === "" && fileIdx > 0) fileIdx--;
+  let elems, filename, inEn, folderPath;
 
-  let filename = elems[fileIdx] || "index.html";
-
-  const inEn = elems[fileIdx - 1] === "en";
-
-  if (inEn)
-  {
-    elems.splice(fileIdx - 1, 1);
-    elems[fileIdx - 1] = enToPl[filename] || filename;
-  }
-  else
-  {
-    elems.splice(fileIdx, 0, "en");
-    const newFileIdx = fileIdx + 1;
-    elems[newFileIdx] = plToEn[filename] || filename;
-  }
-
-  let newPath = elems.join("/");
-
-  if (newPath.endsWith("/") && newPath.length > 1)
-  {
-    newPath = newPath.slice(0, -1);
+  if (isLocal) {
+    // lokalnie: rozdzielamy folder od pliku
+    const parts = pathname.replace(/^\/+/,"").split("/"); // usuń początkowy '/'
+    filename = parts.pop() || "index.html"; // ostatni element to plik
+    folderPath = parts.join("/"); // reszta to folder
+    elems = parts; 
+    inEn = elems.includes("en");
+  } else {
+    // na serwerze: rozbijamy ścieżkę i sprawdzamy język
+    elems = pathname.split("/").filter(e => e !== "");
+    if (elems[0] === "en") {
+      inEn = true;
+      filename = elems[1] || "index.html";
+    } else {
+      filename = elems[0] || "index.html";
+    }
   }
 
-  // nowy URL bez hash
+  let newPath;
+
+  if (inEn) {
+    // zmiana z angielskiego na polski
+    if (isLocal) {
+      // folder bez 'en', plik po folderze
+      const newFolder = elems.filter(e => e !== "en");
+      newPath = `file:///${newFolder.length ? newFolder.join("/") + "/" : ""}${enToPl[filename] || filename}`;
+    } else {
+      // serwer
+      const newElems = elems.slice(1); // usuń 'en'
+      newElems[0] = enToPl[filename] || filename;
+      newPath = "/" + newElems.join("/");
+    }
+  } else {
+    // zmiana z polskiego na angielski
+    if (isLocal) {
+      // dodaj 'en' do folderu przed plikiem
+      newPath = `file:///${folderPath ? folderPath + "/" : ""}en/${plToEn[filename] || filename}`;
+    } else {
+      newPath = "/en/" + (plToEn[filename] || filename);
+    }
+  }
+
   window.location.href = newPath + search + hash;
 }
 
